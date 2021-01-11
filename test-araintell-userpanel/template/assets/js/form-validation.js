@@ -34,7 +34,7 @@ $(function () {
         agree: "required"
       },
       messages: {
-        name: {
+س        name: {
           required: "لطفا نام خود را وارد کنید",
           minlength: "نام نباید کمتر از 3 کاراکتر باشد"
         },

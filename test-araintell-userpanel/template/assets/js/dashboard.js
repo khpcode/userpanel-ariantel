@@ -421,7 +421,7 @@ $(function () {
     bar.text.style.fontFamily = "'Overpass', sans-serif;";
     bar.text.style.fontSize = '3rem';
 
-    bar.animate(.78);
+    bar.animate(.85);
   }
   // Progressgar1 start
 
@@ -433,7 +433,7 @@ $(function () {
       data: {
         labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'],
         datasets: [{
-          label: 'فروش',
+          label: 'مصرف شده',
           data: [150, 110, 90, 115, 125, 160, 190, 140, 100, 110, 120, 120],
           backgroundColor: colors.primary
         }]

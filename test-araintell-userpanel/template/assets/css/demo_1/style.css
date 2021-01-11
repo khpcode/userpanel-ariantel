@@ -31763,7 +31763,7 @@ address p {
   padding: 0;
   height: 32px;
   white-space: nowrap;
-  color: #000;
+  color: #39cd12;
 }
 
 .sidebar .sidebar-body .nav .nav-item .nav-link .link-icon {
@@ -31875,7 +31875,7 @@ address p {
   direction: rtl;
   float: right;
   height: 25px;
-  color: #000;
+  color: white;
   font-size: 13px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;

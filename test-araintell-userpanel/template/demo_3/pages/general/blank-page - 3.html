@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>پنل کاربری</title>
+  <title>پروفایل من</title>
   <!-- core:css -->
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+  <link rel="stylesheet" href="../../../assets/vendors/sweetalert2/sweetalert2.min.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- end plugin css for this page -->
@@ -36,7 +37,6 @@
           <span></span>
         </div>
       </div>
-
       <div class="sidebar-body">
         <ul class="nav">
           
@@ -56,7 +56,6 @@
             </a>
           </li>
 
-
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false"
               aria-controls="emails">
@@ -64,7 +63,7 @@
               <span class="link-title">خرید بسته افزایشی</span>
             </a>
           </li>
-
+          
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false"
               aria-controls="tables">
@@ -104,6 +103,7 @@
                       <a href="pages/ui-components/badges.html" class="nav-link">چت آنلاین</a>
                     </li>
                   </ul>
+
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
               aria-controls="uiComponents">
@@ -150,14 +150,14 @@
         </a>
 
         <div class="navbar-content">
-          <form class="search-form">
+          <form class="search-form" action="#">
             <div class="input-group">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <i data-feather="search"></i>
                 </div>
               </div>
-              <input type="text" class="form-control" id="navbarForm" placeholder="جستجو ...">
+              <input type="text" class="form-control" name="main-search" id="navbarForm" placeholder="جستجو ...">
             </div>
           </form>
 
@@ -256,6 +256,7 @@
                       <p class="sub-text text-muted">به روز رسانی پروژه</p>
                     </div>
                   </a>
+
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
                       <img src="../../../assets/images/face5.jpg" alt="userr">
@@ -429,12 +430,25 @@
 
       <div class="page-content">
         <h4>مشاهده و ویرایش اطلاعات من </h4><br/><br/>
+        
+        <!--paths page-->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-link">
+          <li class="breadcrumb-item"><a href="#">خانه</a></li>
+          <li class="breadcrumb-item"><a href="#">تاریخچه</a></li>
+          <li class="breadcrumb-item"><a href="#">پشتیبانی</a></li>
+          <li class="breadcrumb-item active" aria-current="page">پروفایل من</li>
+        </ol>
+      </nav>
+
+
+
         <div class="row">
 					<div class="col-md-12 grid-margin stretch-card">
 						<div class="card">
 							<div class="card-body">
 								<h6 class="card-title">اطلاعات پروفایل خود را تکمیل کنید</h6>
-								<form>
+								<form action="#">
 
                   <div class="form-group">
 										<label for="exampleFormControlSelect1">نوع شخص</label>
@@ -449,44 +463,52 @@
                   
             
 									<div class="form-group">
-										<label for="exampleInputText1">نام</label>
+                    
+                    <label for="exampleInputText1">نام</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
 										<input type="text" class="form-control" id="exampleInputText1"
-											value=" " placeholder="نام خود را وارد کنید">
+											value=" " placeholder="نام خود را وارد کنید" name="Fname">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">نام خوانوادگی</label>
+                    <label for="exampleInputText1">نام خانوادگی</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
 										<input type="text" class="form-control" id="exampleInputText1"
-											value="" placeholder="نام خوانوادگی خود را وارد کنید">
+											value="" placeholder="نام خانوادگی خود را وارد کنید" name="Lname" >
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">کد ملی</label>
+                    <label for="exampleInputText1">کد ملی</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
 										<input type="text" class="form-control" id="exampleInputText1"
-											value="" placeholder="کد ملی خود را به صورت 00XXXXXXX وارد کنید">
+											value="" placeholder="کد ملی خود را به صورت 00XXXXXXX وارد کنید" name="NID">
                   </div>
                   
 
                   <div class="form-group">
-										<label for="exampleInputText1">شماره شناسنامه</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">شماره شناسنامه</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="IDcard"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">نام پدر</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">نام پدر</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="father-name"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">تاریخ تولد</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">تاریخ تولد</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="birth-date"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleFormControlSelect1">جنسیت</label>
+                    <label for="exampleFormControlSelect1">جنسیت</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
 										<select class="form-control" id="exampleFormControlSelect1">
 											<option selected disabled>جنسیت خود را انتخاب کنید </option>
 											<option>زن</option>
@@ -495,31 +517,35 @@
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">آدرس</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">آدرس</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="address"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">تلفن ثابت</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">تلفن ثابت</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="tel"
 											value="" placeholder="">
                   </div>
-                  
+                    
                   <div class="form-group">
-										<label for="exampleInputText1">تلفن همراه</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">تلفن همراه</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="cell-number"
 											value="" placeholder="شماره همراه خود را به صورت 09XXXXXXXXX وارد کنید">
                   </div>
                   
                   <div class="form-group">
 										<label for="exampleInputText1">شماره فکس</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+										<input type="text" class="form-control" id="exampleInputText1" name="fax-number"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleFormControlSelect1">استان</label>
+                    <label for="exampleFormControlSelect1">استان</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
 										<select class="form-control" id="exampleFormControlSelect1">
 											<option selected disabled>استان خود را انتخاب کنید</option>
 											<option>تهران</option>
@@ -541,51 +567,46 @@
                       <option>خوزستان</option>
                       <option>زنجان</option>
                       <option>گیلان</option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-											<option></option>
+
 										</select>
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">شهر</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">شهر</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="city"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">کد پستی</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">کد پستی</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="post-code"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
 										<label for="exampleInputText1">پست الکترونیک</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+										<input type="text" class="form-control" id="exampleInputText1" name="email" 
 											value="" placeholder="مثال : Test@gmail.com">
                   </div>
                   <div class="form-group">
-										<label for="exampleInputText1">کلمه عبور</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">کلمه عبور</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="password"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1">تایید کلمه عبور</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1">تایید کلمه عبور</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="verfiy-pass"
 											value="" placeholder="">
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleFormControlSelect1">نحوه آشنایی</label>
+                    <label for="exampleFormControlSelect1">نحوه آشنایی</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
 										<select class="form-control" id="exampleFormControlSelect1">
 											<option selected disabled>نحوه آشنایی شما با ما به چه صورت بوده ؟</option>
 											<option>نمایشگاه</option>
@@ -599,14 +620,21 @@
                   </div>
                   
                   <div class="form-group">
-										<label for="exampleInputText1"> محل صدور</label>
-										<input type="text" class="form-control" id="exampleInputText1"
+                    <label for="exampleInputText1"> محل صدور</label>
+                    <p style="display: inline-block;color:red; font-size: 15px;">*</p>
+										<input type="text" class="form-control" id="exampleInputText1" name="city-export"
 											value="" placeholder="مثال : تهران">
                   </div>
                   
-									
+<!-- 									
           <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="برای ارسال کلیک کنید">
-            ارسال فرم
+            ارسال فرم -->
+      </div>
+
+     
+            
+            <button class="btn btn-primary btn-lg" onclick="showSwal('custom-position')" >ذخیره اطلاعات</button>
+         
       </div>
 
       <!-- partial:../../partials/_footer.html -->
@@ -628,6 +656,10 @@
   <!-- endinject -->
   <!-- custom js for this page -->
   <!-- end custom js for this page -->
+
+  <script src="../../../assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+  <script src="../../../assets/vendors/promise-polyfill/polyfill.min.js"></script>
+  <script src="../../../assets/js/sweet-alert.js"></script>
 </body>
 
 </html>

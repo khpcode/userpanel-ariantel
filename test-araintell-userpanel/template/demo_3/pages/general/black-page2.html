@@ -8,6 +8,7 @@
   <title>قالب بوت استرپ مدیریتی NobleUI</title>
   <!-- core:css -->
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+  <link rel="stylesheet" href="../../../assets/vendors/sweetalert2/sweetalert2.min.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- end plugin css for this page -->
@@ -18,7 +19,7 @@
   <!-- Layout styles -->
   <link rel="stylesheet" href="../../../assets/css/demo_1/style.css">
   <!-- End layout styles -->
-  <link rel="shortcut icon" href="../../../assets/images/favicon.png" />
+  <link rel="shortcut icon" href="../../../assets/images/fav.png" />
 </head>
 
 <body class="sidebar-dark rtl">
@@ -645,6 +646,93 @@
 
       <div class="page-content">
 
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">هشدار پایه</p>
+                <button class="btn btn-primary" onclick="showSwal('basic')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">یک عنوان به همراه یک متن زیرین</p>
+                <button class="btn btn-primary" onclick="showSwal('title-and-text')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">مثال Mixin</p>
+                <button class="btn btn-primary" onclick="showSwal('mixin')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">توضیح HTML سفارشی و دکمه ها</p>
+                <button class="btn btn-primary" onclick="showSwal('custom-html')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">موقعیت مکانی سفارشی</p>
+                <button class="btn btn-primary" onclick="showSwal('custom-position')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">یک پیام به همراه تایمر بسته شدن خودکار</p>
+                <button class="btn btn-primary" onclick="showSwal('message-with-auto-close')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description text-center">تایید یا لغو هشدار
+                </p>
+                <button class="btn btn-primary" onclick="showSwal('passing-parameter-execute-cancel')">اینجا کلیک کنید
+                  !</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">مُدال زنجیره ای (صف)</p>
+                <button class="btn btn-primary" onclick="showSwal('chaining-modals')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <p class="card-description">عنوان، متن و یک فوتر</p>
+                <button class="btn btn-primary" onclick="showSwal('title-icon-text-footer')">اینجا کلیک کنید !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+        
       </div>
 
       <!-- partial:../../partials/_footer.html -->
@@ -667,6 +755,7 @@
   <!-- endinject -->
   <!-- custom js for this page -->
   <!-- end custom js for this page -->
+ 
 </body>
 
 </html>
