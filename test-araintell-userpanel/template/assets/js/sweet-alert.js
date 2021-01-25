@@ -128,6 +128,8 @@ $(function () {
           })
         }
       })
+    
+      
     } else if (type === 'dynamic-queue') {
       const ipAPI = 'https://api.ipify.org?format=json'
       Swal.queue([{
@@ -143,7 +145,7 @@ $(function () {
             .catch(() => {
               Swal.insertQueueStep({
                 icon: 'error',
-                title: 'آی پی عمومی شما در دسترس نبود'
+                title: 'آی پی عمومی در دسترس نبود'
               })
             })
         }
@@ -158,9 +160,21 @@ $(function () {
 
       Toast.fire({
         icon: 'success',
-        title: 'ایمیل شما با موفقیت ارسال شد!'
+        title: 'ایمیل شما با موفقیت ارسال شد!',
+        // title: 'بسته انتخاب شد!',
+        // title:'محصول به سبد خرید اضافه گردید',
+        // title:'خرید بسته انجام شد'
       })
     }
-  }
 
+    else if(type === 'mixin')
+  {
+    const Toast = sal.mixin({
+      toast : true,
+      position : 'top-end',
+      showConfirmButton : false,
+      timer : 1113000,
+    });
+  }
+  } 
 });

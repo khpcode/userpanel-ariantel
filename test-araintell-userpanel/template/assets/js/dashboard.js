@@ -305,7 +305,7 @@ $(function () {
           columnWidth: "60%"
         }
       },
-      colors: ["#727cf5"],
+      colors: ["#76e35b"],
       series: [{
         data: [36, 77, 52, 90, 74, 35, 55, 23, 47, 10, 63]
       }],
@@ -336,8 +336,12 @@ $(function () {
     };
     new ApexCharts(document.querySelector("#apexChart2"), options2).render();
   }
-  // Apex chart2 end
 
+
+  //Apex chart 2 in page 3
+
+
+  
   // Apex chart3 start
   if ($('#apexChart3').length) {
     var options3 = {
@@ -438,6 +442,7 @@ $(function () {
           backgroundColor: colors.primary
         }]
       },
+      
       options: {
         maintainAspectRatio: false,
         legend: {
