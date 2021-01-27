@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>درخواست های پشتیبانی</title>
+  <title>مدیریت سرویس ها</title>
   <!-- core:css -->
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
   <!-- endinject -->
@@ -63,7 +63,7 @@
             <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false"
               aria-controls="emails">
               <i data-feather="shopping-cart" style="padding: 3px;"></i>
-              <span class="link-title">خرید بسته افزایشی</span>
+              <span class="link-title">خرید بسته اینترنت</span>
             </a>
           </li>
 
@@ -374,7 +374,7 @@
             <li class="nav-item dropdown nav-profile">
               <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img src="../../../assets/images/admin.jpg" alt="userr" style="padding: 3px;">
+                <img src="../../../assets/images/admin.jpg" alt="userr" style="padding: 4px;">
               </a>
 
               <div class="dropdown-menu" aria-labelledby="profileDropdown">
@@ -442,23 +442,15 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <!-- <h6 class="card-title">ارسال درخواست های پشتیبانی</h6> -->
+                
                 <div style="margin-top: 20px;margin-bottom: 20px;">
 
                   <!-- Large modal -->
 
 
                   
-<div style="display: inline-flex;">
-  <!-- <h5><span class="badge badge-secondary" style="font-size: 20px;">وضعیت سرویس</span></h5> -->
-  
+      <div style="display: inline-flex;">
 
-
-
-
-  <!-- <button type="button" class="btn btn-primary" style="margin-right: 30px;">مشاهده صورت حساب</button> -->
-
-  
 
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-right: 30px;">
@@ -475,9 +467,21 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p>صورت حساب میان دوره : 102000ریال</p>
-                    <p>صورت حساب پایان دوره: 20000اریال</p>
-                  </div>
+                    <!-- <p>صورت حساب میان دوره : 102000ریال</p>
+                    <p>صورت حساب پایان دوره: 20000اریال</p> -->
+                    <div class="form-check">
+											<label class="form-check-label">
+												<input type="checkbox" class="form-check-input">
+												صورت حساب میان دوره : 10000 ریال
+                      </label>
+                    </div>
+                    <div class="form-check">
+											<label class="form-check-label">
+												<input type="checkbox" class="form-check-input">
+												صورت حساب پایان دوره : 20000 ریال
+                      </label>
+										</div>
+                   
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
                     <button type="button" class="btn btn-success">پرداخت</button>
@@ -496,11 +500,11 @@
               </div>
                 </div>
 
-                <div class="table-responsive">
+                <div class="table-responsive" style="margin-top:50px">
                   <table id="dataTableExample" class="table">
                     <thead>
                       <tr>
-                        <th style="text-align: right;color:black;">#</th>
+                        <th style="text-align: right;color:black;">کد سرویس</th>
                         <th style="text-align: right;color:black;">نوع سرویس</th>
                         <th style="text-align: right;color:black;">گروه</th>
                         <th style="text-align: right;color:black;">حجم مصرف شده</th>

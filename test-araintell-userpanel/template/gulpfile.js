@@ -123,6 +123,42 @@ gulp.task('buildCoreJs', () => {
     .pipe(gulp.dest('./assets/vendors/core'));
 });
 
+
+// gulp.task('inject', gulp.series('injectPrtials','replacePaths','injectCommonAssets'));
+// gulp.task('cleanVendors', () => {
+//     return del([
+//         './assets/vendors/**/*'
+//     ]);
+// });
+
+// gulp.task('buildCoreCss', () => {
+//     return gulp.src([
+//         './node_modules/perfect-scrollbar/css/perfect-scrollbar.css'
+//     ])
+
+//     .pipe(cleanCSS({compatibility : 'ie8'}))
+//     .pipe(concat('core.css'))
+//     .pipe(gulp.dest('./assets/vendors/core'));
+// });
+
+
+
+
+
+// gulp.task('buildCorjs', () => {
+//     return gulp.src([
+//         './node_modules/jquery/dist/jquery.min.js',
+//         './node_modules/popper.js/dist/umd/popper.min.js',
+//         './node_modules/bootstrap/dist/js/bootstrap.min.js', 
+//         './node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js',
+//     ])
+
+//     .pipe(concat('core.js'))
+//     .pip(gulp.dest( './assets/vendors/core'));
+// });
+
+
+
 gulp.task('copyAddonCss', () => {
     var style1 = gulp.src('./node_modules/prismjs/themes/*').pipe(gulp.dest('./assets/vendors/prismjs/themes'));
     var style2 = gulp.src(['./node_modules/morris.js/morris.css']).pipe(cleanCSS({compatibility: 'ie8'})).pipe(gulp.dest('./assets/vendors/morris.js'));

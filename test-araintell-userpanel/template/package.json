@@ -1,7 +1,8 @@
 {
   "name": "ArianTell",
   "version": "1.4.0",
-  "description": "Responsive bootstrap userpanel",
+  "description": "Responsive userpanel with bootstrap,html,css,js",
+  "description2" : "set git(control version) in this project",
   "main": "index.html",
   "author": "",
   "license": "",
