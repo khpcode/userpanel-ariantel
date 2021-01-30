@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>افزایش موجودی حساب</title>
+  <title>صفحه خرید سیم کارت</title>
   <!-- core:css -->
   <link rel="stylesheet" href="../../../assets/vendors/sweetalert2/sweetalert2.min.css">
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
@@ -50,7 +50,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="../demo_3/pages/general/blank-page - 3.html" class="nav-link">
+            <a href="" class="nav-link">
 
               <i data-feather="user" style="padding: 3px;"></i>
               <span class="link-title">پروفایل من </span>
@@ -59,7 +59,7 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/black-page4.html" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false"
               aria-controls="emails">
               <i data-feather="shopping-cart" style="padding: 3px;"></i>
               <span class="link-title">خرید بسته اینترنت</span>
@@ -67,7 +67,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="../demo_3/pages/general/black-page-6.html" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false"
               aria-controls="emails">
               <i data-feather="credit-card" style="padding: 3px;"></i>
               <span class="link-title">خرید سیم کارت</span>
@@ -112,29 +112,29 @@
                 <div class="collapse" id="uiComponents">
                   <ul class="nav sub-menu">
                     <li class="nav-item">
-                      <a href="../demo_3/pages/general/blank-page -7.html" class="nav-link">تماس تلفنی</a>
+                      <a href="pages/ui-components/alerts.html" class="nav-link">تماس تلفنی</a>
                     </li>
 
                     <li class="nav-item">
-                      <a href="../demo_3/pages/general/blank-page.html" class="nav-link">ارسال تیکت</a>
+                      <a href="pages/ui-components/badges.html" class="nav-link">ارسال تیکت</a>
                     </li>
                   </ul>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
               aria-controls="uiComponents">
               <i data-feather="map-pin" style="padding: 3px;"></i> 
               <span class="link-title">مناطق تحت پوشش</span>
           </a>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="" href="../demo_3/pages/auth/login -repass.html" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="collapse" href="#forms" role="button" aria-expanded="false"
               aria-controls="forms">
               <i data-feather="key" style="padding: 3px;"></i>
               <span class="link-title">تغییر رمز عبور</span>
               <!-- <i class="link-arrow" data-feather="chevron-down"></i> -->
             </a>
-<!-- 
+
             <div class="collapse" id="forms">
               <ul class="nav sub-menu">
                 <li class="nav-item">
@@ -145,10 +145,10 @@
                 </li>
               </ul>
             </div>
-          </li> -->
+          </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="pages/apps/calendar-jalali.html" class="nav-link">
               <i data-feather="log-out" style="padding: 3px;"></i> 
               <span class="link-title">خروج از حساب</span>
             </a>
@@ -359,6 +359,7 @@
                 </div>
               </div>
             </li>
+
           
             <li class="nav-item dropdown nav-profile">
               <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
@@ -416,37 +417,151 @@
       </nav>
       <!-- partial -->
 
+      
       <div class="page-content">
-       
-
-        <h4 style="color:green">افزایش موجودی حساب</h4><br/><br/>
+        <h4>خرید سیم کارت</h4><br/><br/>
         <form action="#">
           <div class="form-group">
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">مبلغ مورد نظر</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-               
-                <option>10000تومان</option>
-                <option>20000تومان</option>
-                <option>30000تومان</option>
-                <option>60000تومان</option>
-                <option>80000تومان</option>
-                <option>50000تومان</option>
-                
-              </select>
-            </div>
-
-          <div style="display: inline-flex">
-            <h4>موجودی فعلی شما : 10000 ریال</h4>
-            <button type="button" class="btn btn-primary" style="margin-right:40px;margin-bottom: 30px;">افزایش موجودی حساب</button>
+            <label for="exampleFormControlSelect1">انتخاب نوع سیم کارت</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+         
+              <option>دائمی</option>
+              <option>اعتباری</option>
+              <option>دیتاسیم</option>
+              <option>شماره های رند</option>
+              <option>گردشگری</option>
+              <option></option>              
+            </select>
           </div>
-
         </form>
+      </div>
 
+          <h4 id="card-group" style="margin-right: 30px;margin-top: 20px;margin-bottom: 10px;">لیست محصولات </h4>
+
+                <div class="example">
+                  <div class="card-group">
+                    <div class="card">
+                      <img src="../../../assets/images/sim-daeemi.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">محصول 1</h5>
+                        <p class="card-text">بسته اینترنت 100 مگابایت 1 روزه
+                          قیمت: 12,000ریال 
+                          </p>
+                          <p class="card-text"><small class="text-muted">آخرین به روز رسانی 3 دقیقه پیش</small></p>
+                        <!-- <button class="btn btn-primary btn-lg " style="margin-top:30px">خرید بسته</button> -->
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            انتخاب محصول
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="card">
+                    <img src="../../../assets/images/sim-daeemi.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">محصول 2</h5>
+                      <p class="card-text">بسته اینترنت 100 مگابایت 1 روزه
+                        قیمت: 12,000ریال 
+                        </p>
+                      <p class="card-text"><small class="text-muted">آخرین به روز رسانی 3 دقیقه پیش</small></p>
+                      <!-- <button class="btn btn-primary btn-lg " style="margin-top:30px">خرید بسته</button> -->
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input">
+                          انتخاب محصول
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="card">
+                      <img src="../../../assets/images/sim-daeemi.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">محصول 3</h5>
+                        <p class="card-text">بسته اینترنت 100 مگابایت 1 روزه
+                          قیمت: 12,000ریال 
+                          </p>
+                          <p class="card-text"><small class="text-muted">آخرین به روز رسانی 3 دقیقه پیش</small></p>
+                        <!-- <button class="btn btn-primary btn-lg " style="margin-top:30px">خرید بسته</button> -->
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            انتخاب محصول
+                          </label>
+                        </div>            
+                  </figure>
+
+                      </div>
+                    </div>                
+                  </div>
+
+
+                  <div class="example">
+                    <div class="card-group">
+                      <div class="card">
+                        <img src="../../../assets/images/sim-daeemi.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">محصول 1</h5>
+                          <p class="card-text">بسته اینترنت 100 مگابایت 1 روزه
+                            قیمت: 12,000ریال 
+                            </p>
+                            <p class="card-text"><small class="text-muted">آخرین به روز رسانی 3 دقیقه پیش</small></p>
+                          <!-- <button class="btn btn-primary btn-lg " style="margin-top:30px">خرید بسته</button> -->
+                          <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input">
+                              انتخاب محصول
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+  
+                    <div class="card">
+                      <img src="../../../assets/images/sim-daeemi.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">محصول 2</h5>
+                        <p class="card-text">بسته اینترنت 100 مگابایت 1 روزه
+                          قیمت: 12,000ریال 
+                          </p>
+                        <p class="card-text"><small class="text-muted">آخرین به روز رسانی 3 دقیقه پیش</small></p>
+                        <!-- <button class="btn btn-primary btn-lg " style="margin-top:30px">خرید بسته</button> -->
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            انتخاب محصول
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+  
+                      <div class="card">
+                        <img src="../../../assets/images/sim-daeemi.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">محصول 3</h5>
+                          <p class="card-text">بسته اینترنت 100 مگابایت 1 روزه
+                            قیمت: 12,000ریال 
+                            </p>
+                            <p class="card-text"><small class="text-muted">آخرین به روز رسانی 3 دقیقه پیش</small></p>
+                          <!-- <button class="btn btn-primary btn-lg " style="margin-top:30px">خرید بسته</button> -->
+                          <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input">
+                              انتخاب محصول
+                            </label>
+                          </div>            
+                    </figure>
+  
+                        </div>
+                      </div>                
+                    </div>
+                  <!-- <button type="button" class="btn btn-primary btn-lg btn" style="margin-right: 30px;margin-top: 30px;margin-bottom: 50px;">خرید</button> -->
+                  <button type="button" class="btn btn-success btn-lg" style="margin-right: 30px;margin-top: 30px;margin-bottom: 50px;"><a href="#" style="color:white">خرید</a></button>
       <!-- partial:../../partials/_footer.html -->
-      <!-- <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <p class="text-muted text-center text-md-left">Copyright © 2020،تمام حقوق مادی و معنوی  این سایت متعلق به آرین تل می باشد</p>
-      </footer> -->
+      <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <p class="text-muted text-center text-md-left">Copyright © 2020،تمامی حقوق مادی و معنوی این سایت متعلق به <a href="https://www.ariantel.ir" style="color:green;">آرین تل</a>  می باشد </p>
+      </footer>
       <!-- partial -->
     </div>
   </div>

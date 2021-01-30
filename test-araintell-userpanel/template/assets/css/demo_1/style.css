@@ -31763,7 +31763,7 @@ address p {
   padding: 0;
   height: 32px;
   white-space: nowrap;
-  color: #39cd12;
+  color: white;
 }
 
 .sidebar .sidebar-body .nav .nav-item .nav-link .link-icon {
@@ -31800,7 +31800,7 @@ address p {
 }
 
 .sidebar .sidebar-body .nav .nav-item .nav-link[aria-expanded="true"] {
-  color: #727cf5;
+  color: #4bf01b;
 }
 
 .sidebar .sidebar-body .nav .nav-item .nav-link[aria-expanded="true"] .link-arrow {
@@ -31823,7 +31823,7 @@ address p {
 }
 
 .sidebar .sidebar-body .nav .nav-item:hover .nav-link {
-  color: #727cf5;
+  color: #4bf01b;
 }
 
 .sidebar .sidebar-body .nav .nav-item:hover .nav-link .link-title {
@@ -31897,7 +31897,7 @@ address p {
 }
 
 .sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link.active {
-  color: #727cf5 !important;
+  color: #4bf01b !important;
 }
 
 .sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link.active::before {
@@ -31906,7 +31906,7 @@ address p {
 }
 
 .sidebar .sidebar-body .nav.sub-menu .nav-item:hover .nav-link {
-  color: #727cf5 !important;
+  color: #4bf01b !important;
   margin-left: 3px;
 }
 
@@ -31962,12 +31962,12 @@ address p {
 }
 
 .sidebar-dark .sidebar .sidebar-body .nav .nav-item .nav-link {
-  color: #39cd12 !important;
+  color: whitesmoke !important;
 }
-
-/* .sidebar-dark .sidebar .sidebar-body .nav .nav-item .nav-link a:hover {
-  color: #fff !important;
-} */
+/* 
+ .sidebar-dark .sidebar .sidebar-body .nav .nav-item .nav-link a:hover {
+  color: #4bf01b !important;
+}  */
 
 
 
@@ -31976,7 +31976,7 @@ address p {
 }
 
 .sidebar-dark .sidebar .sidebar-body .nav .nav-item .nav-link[aria-expanded="true"] {
-  color: #727cf5;
+  color: green;
 }
 
 .sidebar-dark .sidebar .sidebar-body .nav .nav-item:hover .nav-link svg,
@@ -31986,7 +31986,7 @@ address p {
 
 .sidebar-dark .sidebar .sidebar-body .nav .nav-item:hover .nav-link .link-title,
 .sidebar-dark .sidebar .sidebar-body .nav .nav-item.active .nav-link .link-title {
-  color: #fff;
+  color: #4bf01b;
 }
 
 .settings-sidebar {
