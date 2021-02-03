@@ -123,6 +123,16 @@ gulp.task('buildCoreJs', () => {
     .pipe(gulp.dest('./assets/vendors/core'));
 });
 
+gulp.task('buildCoreJs', () => {
+    return gulp.src([
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/popper.js/dist/umd/popper.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+
+    ])
+})
+
+
 
 // gulp.task('inject', gulp.series('injectPrtials','replacePaths','injectCommonAssets'));
 // gulp.task('cleanVendors', () => {
@@ -140,6 +150,8 @@ gulp.task('buildCoreJs', () => {
 //     .pipe(concat('core.css'))
 //     .pipe(gulp.dest('./assets/vendors/core'));
 // });
+
+
 
 
 

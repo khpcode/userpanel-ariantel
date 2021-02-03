@@ -19,32 +19,35 @@
   <link rel="stylesheet" href="../../../assets/css/demo_1/style.css">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="../../../assets/images/fav.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../../../assets/js/login.js"></script>
 </head>
 
-<body class="sidebar-dark rtl">
-  <div class="main-wrapper">
-    <div class="page-wrapper full-page">
-      <div class="page-content d-flex align-items-center justify-content-center">
+  <body class="sidebar-dark rtl">
+    <div class="main-wrapper">
+      <div class="page-wrapper full-page">
+        <div class="page-content d-flex align-items-center justify-content-center">
 
-        <div class="row w-100 mx-0 auth-page">
-          <div class="col-md-8 col-xl-6 mx-auto">
-            <div class="card">
-              <div class="row">
-                <div class="col-md-4 pl-md-0">
-                  <div class="auth-left-wrapper">
-
+          <div class="row w-100 mx-0 auth-page">
+            <div class="col-md-8 col-xl-6 mx-auto">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-4 pl-md-0">
+                    <div class="auth-left-wrapper">
+                    </div>
                   </div>
-                </div>
 
-                
                 <div class="col-md-8 pr-md-0">
                   <div class="auth-form-wrapper px-4 py-5" style="box-shadow: 1px 1px 3px gray;">
-                    <a href="../../dashboard-one.html" class="noble-ui-logo d-block mb-2" style="text-align: center;">Arain<span style="color:green">Tell</span></a>
+                    <a href="../../dashboard-one.html" class="noble-ui-logo d-block mb-2" style="text-align: center;">Arain<span style="color:green">Tel</span></a>
                     <h5 class="text-muted font-weight-normal mb-4" style="text-align: center;">ورود به حساب کاربری</h5>
-                    <form class="forms-sample">
+                    <form class="forms-sample" action="#">
                       <div class="form-group">
-                        <label for="exampleInputEmail1" style="color:darkgreen">شماره همراه خود را وارد کنید</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="مثال : 09XXXXXXXX">
+                        <label for="exampleInputEmail1" style="color:darkgreen">نام کاربری</label>
+                        <input type="email" class="form-control" id="email" placeholder="ایمیل یا کد ملی خود را وارد کنید" name="username">
+
+                        <label for="exampleInputEmail1" style="color:darkgreen">کلمه عبور</label>
+                        <input type="email" class="form-control" id="password" placeholder="کلمه عبور خود را وارد کنید" name="password">
                       </div>
                       
                       <div class="form-check form-check-flat form-check-success">
@@ -54,22 +57,13 @@
                         </label>
                       </div>
 
-                    
-
                   <!--captcha code--><!-- <div></div> -->
 
-                    
-                      <div class="form-check form-check-flat form-check-success">
-                        <!-- <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input">
-                          مرا به خاطر بسپار
-                        </label> -->
+                      <div class="form-check form-check-flat form-check-success">  
                       </div>
 
                       <div class="mt-3">
-                        <!-- <a href="../../dashboard-one.html" class="btn btn-primary text-white ml-2 mb-2 mb-md-0">ورود</a> -->
-
-                        <button type="button" class="btn btn-success btn-lg btn-block" >ورود</button>
+                        <button type="button" class="btn btn-success btn-lg btn-block" onclick="Login()" >ورود</button>
                       </div>
 
                       <a href="register.html" class="d-block mt-3 text-muted">حساب کاربری ندارید؟ ثبت نام کنید</a>

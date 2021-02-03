@@ -39,6 +39,7 @@ $(function () {
     name: 'states',
     source: substringMatcher(states)
   });
+
   // constructs the suggestion engine
   var states = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
