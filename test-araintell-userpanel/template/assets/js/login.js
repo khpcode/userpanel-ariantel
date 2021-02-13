@@ -1,79 +1,145 @@
+//test login1
 
-//ورود کاربر 
-function Login()
+// function login(username,password)
+// {
+//   $.ajax({
+//     type:"json",
+//     method: "POST",
+//     url: "https://194.60.210.45:8243/OCS/1/rest/Account/get_account_info",  
+//     data: { username: "khp", password: "123" },
+//     success: function (response) {
+//       alert(response);
+//       $("body").append(response);
+  
+//   },
+//   error: function (response) {
+//       alert("Error: " + response);
+//   }
+//   })
+// }
 
-{
-    $.ajax({
+// async function getCourses(){
+//   let courses = await sendRequest("/user/courses","GET",{});
+// }
+//test login Ajax 
 
-        type:"json",
-        method:"POST",
-        url:"https://194.60.210.57/rest/login/api/1",
-        data:{email:"", password:""},
 
-        // data:{username:"", password:""},
+ /**************************************************************************/ 
 
-        success: function(response) {
 
-            alert(response);
-            $("body").append(response);
-        },
+//login function
 
-        error: function(response) {
-            alert("Error: " + response);
-        },
+  
+   /**************************************************************************/ 
+  
+  //OTP function
+//   async function OtpLogin(phoneNumber) 
+//   {
+//         let result = await sendRequest("/OCS/1/rest/Account/get_account_info", "POST",{
 
-        StatusCode: {
-            404 :function(response) {
-                alert("صفحه مورد نظر یافت نشد" + response);
-            },
+//             phoneNumber: phoneNumber,
+//         });
+//   }
 
-            500 : function(response) {
-                alert("خطای سرور" + response);
-            }
-        }
-    })
+
+// async function Register(Fname,Lname,phoneNumber,NationalID,email,password)
+// {
+
+//     let result = await sendRequest("/OCS/1/reset/Account/get_account_info", "POST",{
+        
+//         Fname:Fname,
+//         Lname:Lname,
+//         phoneNumber:phoneNumber,
+//         NationalID:NationalID,
+//         email:email,
+//         password:password, 
+//     });
+// }
+
+
+
+
+
+ /**************************************************************************/ 
+
+  // resetpass function
+//   async function resetpass(email,oldpass,newpass){
+
+//     let result = await sendRequest("OCS/1/rest/Acccount/get_account_info", "POST", {
+        
+//         email: email,
+//         oldpass: oldpass,
+//         newpass: newpass,
+//     });
+//   }
+
+   /**************************************************************************/ 
+
+  //login with email,pass function
+//   async function login2(email,password)
+//   {
+//         let result = await sendRequest("OCS/1/rest/Acccount/get_account_info", "POST",{
+
+//             email: email,
+//             password: password,
+
+//         });
+//   }
+
+  /**************************************************************************/ 
+  //register function
+// async function register(Fname,Lname,email,NationalID,password) {
+//     let result = await sendRequest("OCS/1/rest/Account/get_account_info", "POST", {
+
+//         Fname:Fname,
+//         Lname:Lname,
+//         email:email,
+//         NationalID:NationalID,
+//         password:password,
+//     });
+// }
+
+ /**************************************************************************/ 
+//login function
+async function login(username,password) {
+  
+  let result = await sendRequest("/bss/v1/rest/Customer/get_costumer_info","POST",{
+    username: username,
+    password: password
+  });
+
+  console.log(result);
 }
 
-// فرم ثبت نام 
+//sendRequest function
+async function sendRequest(url, type, data,callback) {
+  return new Promise((resolve, reject) => {
+      // API url
+      const apiUrl = "https://194.60.210.45:8243";
 
-function Register()
-{
-    $.ajax({
-        type:"json",
-        method:"POST",
-        url:"htpps://194.60.23.10/rest/api/12",
-        data : {
-            getusername : "khp",
-            getpassword: "$%hg&^GH",
-            getTel:"0912874387",
-            getNationalCode:"1812873",
-            getCity:"Tehran",
-            getPostCode : "1439849880",
-            getbirthDate: "1377/19/10",
-            getAddress: "Tehran-5sadslkdflkdf",
-            getPhonenumber:"021-8877276",
-            getIdNumber:"098120349",
-        },
-
-        success :function(response) {
-            alert("ثبت نام شما با موفقیت انجام شد" + response);
-            $("body").append(response);
-        }, 
-
-        error : function(response) {
-            alert("ثبت نام شما با خطا مواجه شد!" + response);
-        },
-
-        StatusCode : {
-            404: function(response) {
-                alert("صفحه مورد نظر یافت نشد" + response);
-            },
-
-            500 : function(response) {
-                alert("خطای سرور " + response);
-            }
-        }
-
-    })
-    
+      $.ajax({
+          url: apiUrl + url,
+          type: type,
+          data: type == "GET" ? data : JSON.stringify(data),
+          headers: {
+              "Bearer 7ffed1a2-77ae-3f61-89f7-1e749d6e6758": localStorage.getItem("Bearer 7ffed1a2-77ae-3f61-89f7-1e749d6e6758"),
+              "Content-Type": "application/x-www-form-urlencoded",
+              "Content-Length": 333
+              
+          },
+          dataType: "json",
+          success: function (data, status) {
+              resolve(data);
+          },
+          error: function (xhr, textStatus, errorMessage) {
+              console.log(xhr);
+              resolve(xhr.responseJSON);
+          },
+      });
+  });
 }
+
+
+$("#button-id").on("click",()=>{
+  login($("#userinput-id").val(),$("#passinput-id").val());
+});

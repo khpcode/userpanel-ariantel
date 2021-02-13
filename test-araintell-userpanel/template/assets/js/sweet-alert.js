@@ -56,18 +56,18 @@ $(function () {
 
       swalWithBootstrapButtons.fire({
         title: 'آیا مطمئن هستید؟',
-        text: "بعد از حذف شما قادر به بازگردانی اطلاعات نخواهید بود",
+        text: "بعد از ارسال شما قادر به بازگردانی اطلاعات نخواهید بود",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonClass: 'mr-2',
-        confirmButtonText: 'بله، حذف شود!',
+        confirmButtonText: 'بله، ارسال شود!',
         cancelButtonText: 'نه، لغو شود',
         reverseButtons: true
       }).then((result) => {
         if (result.value) {
           swalWithBootstrapButtons.fire(
-            'حذف شد!',
-            'فایل مورد نظر شما حذف شد!',
+            'ارسال شد!',
+            'فایل مورد نظر شما ارسال شد!',
             'success'
           )
         } else if (
@@ -76,7 +76,7 @@ $(function () {
         ) {
           swalWithBootstrapButtons.fire(
             'لغو شد',
-            'شما حذف فایل را لغو کردید :)',
+            'ارسال تیکت شما لغو شد! :)',
             'error'
           )
         }

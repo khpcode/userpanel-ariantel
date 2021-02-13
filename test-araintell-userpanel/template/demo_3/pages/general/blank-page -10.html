@@ -421,12 +421,12 @@
           <div class="form-group">
             
             <label for="exampleFormControlInput1">نام و خانوادگی</label>
-            <input type="text" class="form-control" name="Lname" id="exampleFormControlInput1" placeholder="نام و نام خانوادگی خود را وارد کنید...">
+            <input type="text" value="خشایار پنبه ئیان" disabled class="form-control" name="Lname" id="exampleFormControlInput1" placeholder="نام و نام خانوادگی خود را وارد کنید...">
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlInput1">ایمیل</label>
-            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="ایمیل خود را وارد کنید..."/>
+            <input type="email" value="kpanbeian@gmail.com" disabled class="form-control" name="email" id="exampleFormControlInput1" placeholder="ایمیل خود را وارد کنید..."/>
           </div> 
 
           <!-- <div class="form-group">
@@ -443,9 +443,9 @@
             <div class="form-group">
               <div class="form-group">
                 <label for="exampleFormControlSelect1">اولویت تیکت</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" disabled>
                   
-                  <option>ضروری </option>
+                  <option value="ضروری" >ضروری </option>
                   <option>معمولی</option>
                   <option>مهم</option>
                   
@@ -457,9 +457,9 @@
             <div class="form-group">
               <div class="form-group">
                 <label for="exampleFormControlSelect1">دسته بندی تیکت</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="exampleFormControlSelect1" disabled>
                   
-                  <option>درخواست مسدودی </option>
+                  <option value="درخواست مسدودی">درخواست مسدودی </option>
                   <option>درخواست جمع آوری</option>
                   <option>سایر</option>
                   
@@ -470,12 +470,12 @@
 
           <div class="form-group">
             <label for="exampleFormControlInput1">موضوع تیکت</label>
-            <input type="text" class="form-control" name="subject" id="exampleFormControlInput1" maxlength="30" minlength="20" placeholder="موضوع تیکت خود را وارد کنید...">
+            <input type="text" class="form-control" value="مسدودی سیم کارت" disabled name="subject" id="exampleFormControlInput1" maxlength="30" minlength="20" placeholder="موضوع تیکت خود را وارد کنید...">
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlTextarea1">متن تیکت</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="ticket-description" rows="7" placeholder="متن تیکت خود را وارد کنید ..." maxlength="300" minlength="10" ></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" disabled name="ticket-description" rows="7" placeholder="سلام درخواست مسدودی سیم کارت را دارم" maxlength="300" minlength="10" ></textarea>
           </div>
 
 
@@ -491,9 +491,9 @@
         </form>
 
         <!-- <button class="btn btn-primary btn-lg " onclick="showSwal('mixin')" >ادامه</button> -->
- <button class="btn btn-primary btn-lg">
-  <a href="../general/blank-page -10.html" style="color: white;list-style-type: none;"> ادامه
-          </button></a>
+
+        <button class="btn btn-primary btn-lg" onclick="showSwal('passing-parameter-execute-cancel')"> ارسال تیکت
+          </button>
       </div>
 
 

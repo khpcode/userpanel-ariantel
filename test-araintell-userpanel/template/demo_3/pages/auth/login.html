@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>فرم ورود</title>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!-- core:css -->
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
   <!-- endinject -->
@@ -19,7 +21,9 @@
   <link rel="stylesheet" href="../../../assets/css/demo_1/style.css">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="../../../assets/images/fav.png" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
   <script src="../../../assets/js/login.js"></script>
 </head>
 
@@ -39,15 +43,17 @@
 
                 <div class="col-md-8 pr-md-0">
                   <div class="auth-form-wrapper px-4 py-5" style="box-shadow: 1px 1px 3px gray;">
-                    <a href="../../dashboard-one.html" class="noble-ui-logo d-block mb-2" style="text-align: center;">Arain<span style="color:green">Tel</span></a>
+                    <!-- <a href="../../dashboard-one.html" class="noble-ui-logo d-block mb-2" style="text-align: center;"></a> -->
+ 
+                    <img src="../../../assets/images/ariantel.png" alt="pic" style="width: 150px;height: 60px;margin-right: 140px;margin-bottom: 30px;">
                     <h5 class="text-muted font-weight-normal mb-4" style="text-align: center;">ورود به حساب کاربری</h5>
                     <form class="forms-sample" action="#">
                       <div class="form-group">
                         <label for="exampleInputEmail1" style="color:darkgreen">نام کاربری</label>
-                        <input type="email" class="form-control" id="email" placeholder="ایمیل یا کد ملی خود را وارد کنید" name="username">
+                        <input type="text" class="form-control" id="userinput-id" placeholder="ایمیل یا کد ملی خود را وارد کنید" name="username">
 
                         <label for="exampleInputEmail1" style="color:darkgreen">کلمه عبور</label>
-                        <input type="email" class="form-control" id="password" placeholder="کلمه عبور خود را وارد کنید" name="password">
+                        <input type="text" class="form-control" id="passinput-id" placeholder="کلمه عبور خود را وارد کنید" name="password">
                       </div>
                       
                       <div class="form-check form-check-flat form-check-success">
@@ -63,7 +69,7 @@
                       </div>
 
                       <div class="mt-3">
-                        <button type="button" class="btn btn-success btn-lg btn-block" onclick="Login()" >ورود</button>
+                        <button type="button" class="btn btn-success btn-lg btn-block" id="button-id">ورود</button>
                       </div>
 
                       <a href="register.html" class="d-block mt-3 text-muted">حساب کاربری ندارید؟ ثبت نام کنید</a>
