@@ -108,7 +108,14 @@ async function login(username,password) {
     password: password
   });
 
+ 
+
   console.log(result);
+}
+
+
+async function otpLogin(phonenumber) {
+  let result = await sendRequest("OCS/1/rest/Customer_get_customer_info")
 }
 
 //sendRequest function
