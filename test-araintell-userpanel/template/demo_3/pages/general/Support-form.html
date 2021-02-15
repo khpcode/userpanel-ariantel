@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>مدیریت سرویس ها</title>
+  <title>ارسال تیکت پشتیبانی</title>
   <!-- core:css -->
+  <link rel="stylesheet" href="../../../assets/vendors/sweetalert2/sweetalert2.min.css">
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
-  <link rel="stylesheet" href="../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
   <!-- end plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
@@ -29,7 +29,6 @@
     <nav class="sidebar">
       <div class="sidebar-header">
         <img src="../../../assets/images/ariantel.png" alt="pic" style="width: 100px;height: 40px;">
-
         <div class="sidebar-toggler not-active">
           <span></span>
           <span></span>
@@ -58,7 +57,15 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/black-page-6.html" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/black-page4.html" role="button" aria-expanded="false"
+              aria-controls="emails">
+              <i data-feather="shopping-cart" style="padding: 3px;"></i>
+              <span class="link-title">خرید بسته اینترنت</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="../demo_3/pages/general/black-page-6.html" role="button" aria-expanded="false"
               aria-controls="emails">
               <i data-feather="credit-card" style="padding: 3px;"></i>
               <span class="link-title">خرید سیم کارت</span>
@@ -66,42 +73,34 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/black-page4.html" role="button" aria-expanded="false"
-              aria-controls="emails">
-              <i data-feather="shopping-cart" style="padding: 3px;"></i>
-              <span class="link-title">خرید بسته </span>
-            </a>
-          </li>
-
-          
-
-          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false"
               aria-controls="tables">
 
               <i data-feather="book-open" style="padding: 3px;"></i>
-              <span class="link-title">خدمات من</span>
+              <span class="link-title">تاریخچه</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
 
             <div class="collapse" id="tables">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../demo_3/pages/general/blank-page -8.html" class="nav-link">تاریخچه بسته ها</a>
+                  <a href="pages/tables/basic-table.html" class="nav-link">گزارش مصرف بسته 2 روز اخیر</a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="../demo_3/pages/general/blank-page -9.html" class="nav-link">صورتحساب</a>
+                  <a href="pages/tables/data-table.html" class="nav-link">گزارش خرید بسته های افزایشی</a>
                 </li>
-                
+
                 <li class="nav-item">
-                  <a href="../demo_3/pages/general/blank-page -9.html" class="nav-link">مناطق تحت پوشش</a>
+                  <a href="pages/tables/data-table.html" class="nav-link">گزارش مصرف بسته دوره های قبل</a>
                 </li>
 
               </ul>
 
+
+
               <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
+                <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="true"
                   aria-controls="uiComponents">
                   <i data-feather="phone-call" style="padding: 3px;"></i>
                   <span class="link-title">پشتیبانی</span>
@@ -119,38 +118,40 @@
                     </li>
                   </ul>
 
-<!-- 
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#" role="button" aria-expanded="false"
-                  aria-controls="uiComponents">
-                  <i data-feather="map-pin" style="padding: 3px;"></i> 
-                  <span class="link-title">مناطق تحت پوشش</span>
-              </a> -->
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#" role="button" aria-expanded="false"
+              aria-controls="uiComponents">
+              <i data-feather="map-pin" style="padding: 3px;"></i> 
+              <span class="link-title">مناطق تحت پوشش</span>
+          </a>
 
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="" href="../demo_3/pages/auth/login -repass.html" role="button" aria-expanded="false"
-                  aria-controls="forms">
-                  <i data-feather="key" style="padding: 3px;"></i>
-                  <span class="link-title">تغییر رمز عبور</span>
-                  
-                </a>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="" href="../demo_3/pages/auth/login -repass.html" role="button" aria-expanded="false"
+              aria-controls="forms">
+              <i data-feather="key" style="padding: 3px;"></i>
+              <span class="link-title">تغییر رمز عبور</span>
+              <!-- <i class="link-arrow" data-feather="chevron-down"></i> -->
+            </a>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i data-feather="log-out" style="padding: 3px;"></i> 
-                  <span class="link-title">خروج از حساب</span>
-                </a>
-              </li>
-              </li>
-            
-          </div>
-        </nav>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i data-feather="log-out" style="padding: 3px;"></i> 
+              <span class="link-title">خروج از حساب</span>
+            </a>
+          </li>
+          </li>
+         
+      </div>
+    </nav>
+
+
     <!-- partial -->
-    <div class="page-wrapper">
 
-      <!-- partial:../../partials/_navbar.html -->
+    <div class="page-wrapper">
+    <!-- partial:../../partials/_navbar.html -->
       <nav class="navbar">
-          <a href="#" class="sidebar-toggler">
+        <a href="#" class="sidebar-toggler">
           <i data-feather="menu"></i>
         </a>
 
@@ -162,8 +163,7 @@
                   <i data-feather="search"></i>
                 </div>
               </div>
-              <input type="text" class="form-control" name="main-search" id="navbarForm" placeholder="جستجو ...">
-              
+              <input type="text" class="form-control" id="navbarForm" name="main-search" placeholder="جستجو ...">
             </div>
           </form>
 
@@ -192,7 +192,7 @@
                 <div class="dropdown-body">
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/admin.jpg" alt="userr">
+                      <img src="../../../assets/images/face3.jpg" alt="userr">
                     </div>
 
                     <div class="content">
@@ -205,8 +205,9 @@
                   </a>
 
                   <a href="javascript:;" class="dropdown-item">
+
                     <div class="figure">
-                      <img src="../../../assets/images/admin.jpg" alt="userr">
+                      <img src="../../../assets/images/face2.jpg" alt="userr">
                     </div>
 
                     <div class="content">
@@ -220,9 +221,8 @@
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/admin.jpg" alt="userr">
+                      <img src="../../../assets/images/face4.jpg" alt="userr">
                     </div>
-
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
                         <p>پدرام شریفی</p>
@@ -234,7 +234,7 @@
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/admin.jpg" alt="userr">
+                      <img src="../../../assets/images/face5.jpg" alt="userr">
                     </div>
 
                     <div class="content">
@@ -248,13 +248,15 @@
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/admin.jpg" alt="userr">
+                      <img src="../../../assets/images/face6.jpg" alt="userr">
                     </div>
+
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
                         <p>نرگس علیپور</p>
                         <p class="sub-text text-muted">5 ساعت قبل</p>
                       </div>
+
                       <p class="sub-text text-muted">رکورد جدید</p>
                     </div>
                   </a>
@@ -278,7 +280,7 @@
               <div class="dropdown-menu" aria-labelledby="notificationDropdown">
                 <div class="dropdown-header d-flex align-items-center justify-content-between">
                   <p class="mb-0 font-weight-medium">6 اعلان جدید</p>
-                  <a href="javascript:;" class="text-muted" style="color:#727cf5;">پاک کردن همه</a>
+                  <a href="javascript:;" class="text-muted">پاک کردن همه</a>
                 </div>
 
                 <div class="dropdown-body">
@@ -304,22 +306,23 @@
                     </div>
                   </a>
 
+                  
                   <a href="javascript:;" class="dropdown-item">
                     <div class="icon">
                       <i data-feather="alert-circle"></i>
                     </div>
 
+                    
                     <div class="content">
                       <p>محدودیت سرور!</p>
                       <p class="sub-text text-muted">1 ساعت قبل</p>
                     </div>
                   </a>
-                  
+               
                   <a href="javascript:;" class="dropdown-item">
                     <div class="icon">
                       <i data-feather="layers"></i>
                     </div>
-
                     <div class="content">
                       <p>برنامه ها نیاز به به روز رسانی دارند</p>
                       <p class="sub-text text-muted">5 ساعت قبل</p>
@@ -330,7 +333,7 @@
                     <div class="icon">
                       <i data-feather="download"></i>
                     </div>
-                    
+
                     <div class="content">
                       <p>دانلود تکمیل شد</p>
                       <p class="sub-text text-muted">6 ساعت قبل</p>
@@ -344,21 +347,22 @@
               </div>
             </li>
 
+          
             <li class="nav-item dropdown nav-profile">
               <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img src="../../../assets/images/admin.jpg" alt="userr" style="padding: 4px;">
+                <img src="../../../assets/images/admin.jpg" alt="userr" style="padding: 5px;">
               </a>
 
+            
               <div class="dropdown-menu" aria-labelledby="profileDropdown">
                 <div class="dropdown-header d-flex flex-column align-items-center">
                   <div class="figure mb-3">
                     <img src="" alt="">
                   </div>
-
                   <div class="info text-center">
                     <p class="name font-weight-bold mb-0">خشایار پنبه ئیان</p>
-                    <p class="email text-muted mb-3">09120983987</p>
+                    <p class="email text-muted mb-3">0912984878</p>
                   </div>
                 </div>
 
@@ -400,235 +404,94 @@
       </nav>
       <!-- partial -->
 
-<!-- Data table -->
       <div class="page-content">
+        <h4>ارسال تیکت به پشتیبانی</h4><br/><br/>
+        <form action="#">
+          <div class="form-group">
+            
+            <label for="exampleFormControlInput1">نام و خانوادگی</label>
+            <input type="text" class="form-control" name="Lname" id="exampleFormControlInput1" placeholder="نام و نام خانوادگی خود را وارد کنید...">
+          </div>
 
+          <div class="form-group">
+            <label for="exampleFormControlInput1">ایمیل</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="ایمیل خود را وارد کنید..."/>
+          </div> 
 
-        <nav class="page-breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">خانه</a></li>
-            <li class="breadcrumb-item active" aria-current="page">مدیریت سرویس ها</li>
-          </ol>
-        </nav>
-
-        <div class="row">
-          <div class="col-md-12 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
+          <!-- <div class="form-group">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">واحد</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected disabled>واحد مورد نظر را انتخاب کنید</option>
+                <option>منتظر بررسی خرابی</option>
+                <option>خرابی خط رفع شد</option>
                 
-                <div style="margin-top: 20px;margin-bottom: 20px;">
-
-                  <!-- Large modal -->
-
-
+              </select>
+            </div> -->
+            
+            <div class="form-group">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">اولویت تیکت</label>
+                <select class="form-control" id="exampleFormControlSelect1">
                   
-      <div style="display: inline-flex;">
-
-
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-right: 30px;">
-              ایجاد صورتحساب
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">اطلاعات صورت حساب</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                   
-                    <div class="form-check">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input">
-												صورت حساب میان دوره : 10000 ریال
-                      </label>
-                    </div>
-                    <div class="form-check">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input">
-												صورت حساب پایان دوره : 20000 ریال
-                      </label>
-										</div>
-                   
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
-                    <button type="button" class="btn btn-success">پرداخت</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
+                  <option>ضروری </option>
+                  <option>معمولی</option>
+                  <option>مهم</option>
                   
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <p>موضوع تیکت</p>
-                  </div>
-                </div>
+                </select>
               </div>
-                </div>
 
-                <div class="table-responsive" style="margin-top:50px">
-                  <table id="dataTableExample" class="table">
-                    <thead>
-                      <tr>
-                        <th style="text-align: right;color:black;">کد سرویس</th>
-                        <th style="text-align: right;color:black;">نوع سرویس</th>
-                        <th style="text-align: right;color:black;">گروه</th>
-                        <th style="text-align: right;color:black;">حجم مصرف شده</th>
-                        <th style="text-align: right;color:black;">آخرین تغییر</th>
-                        <th style="text-align: right;color:black;">نام بسته</th>
-                        <th style="text-align: right;color:black;">تاریخ اتمام</th>
-                        <th style="text-align: right;color:black;">وضعیت سیم کارت</th>
-                        <th style="text-align: right;color:black;">شماره موبایل</th>
-                        
-                      </tr>
-                    </thead>
 
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>پیامک</td>
-                        <td>داخل شبکه</td>
-                        <td>بسته شده</td>
-                        <td>مصرف شده 20:19 دقیقه</td>
-                        <td>مدیران</td>
-                        <td>1399/10/10</td>
-                        <td>فعال</td>
-                        <td>0912984309</td>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>2</td>
-                          <td>اینترنت</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>3</td>
-                          <td>تماس</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>       
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>4</td>
-                          <td>تماس</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>4</td>
-                          <td>پیامک</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>    
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>5</td>
-                        <td>اینترنت</td>
-                        <td>خارج شبکه</td>
-                        <td>بسته شده</td>
-                        <td>مصرف شده 20:19 دقیقه</td>
-                        <td>مدیران</td>
-                        <td>1399/10/10</td>
-                        <td>فعال</td>
-                        <td>0912984309</td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>6</td>
-                          <td>اینترنت</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>7</td>
-                          <td>تماس</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>8</td>
-                          <td>پیامک</td>
-                          <td>خارج شبکه</td>
-                          <td>بسته شده</td>
-                          <td>مصرف شده 20:19 دقیقه</td>
-                          <td>مدیران</td>
-                          <td>1399/10/10</td>
-                          <td>فعال</td>
-                          <td>0912984309</td>
-                        </tr>
-                      </tr>
-                     
-                    </tbody>
-                  </table>
-                </div>
+              
+            <div class="form-group">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">دسته بندی تیکت</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  
+                  <option>درخواست مسدودی </option>
+                  <option>درخواست جمع آوری</option>
+                  <option>سایر</option>
+                  
+                </select>
               </div>
+
+          </div> 
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">موضوع تیکت</label>
+            <input type="text" class="form-control" name="subject" id="exampleFormControlInput1" maxlength="30" minlength="20" placeholder="موضوع تیکت خود را وارد کنید...">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">متن تیکت</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="ticket-description" rows="7" placeholder="متن تیکت خود را وارد کنید ..." maxlength="300" minlength="10" ></textarea>
+          </div>
+
+
+          <label>فایل خود را بارگزاری کنید</label><p style="color:#db4646;display: inline-block;margin-right: 30px;">فرمت فایل آپلودی باید (jpg,png.pdf) باشد</p><br/>
+
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" name="file-input" class="custom-file-input" id="inputGroupFile02">
+              <label class="custom-file-label" for="inputGroupFile02" style="text-align:center"></label>
             </div>
           </div>
-        </div>
+         
+        </form>
+
+          <button class="btn btn-primary btn-lg">
+                <a href="../general/support-data.html" style="color: white;list-style-type: none;"> ادامه
+          </button>
+                </a>
       </div>
+
+
 
       <!-- partial:../../partials/_footer.html -->
       <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <p class="text-muted text-center text-md-left">Copyright © 2020،تمامی حقوق مادی و معنوی این سایت متعلق به<a style="color:#4bf01b;cursor: pointer;"> آرین تل </a> می باشد</p>
+        <p class="text-muted text-center text-md-left">Copyright © 2020،تمام حقوق مادی و معنوی  این سایت متعلق به آرین تل می باشد</p>
       </footer>
       <!-- partial -->
-
     </div>
   </div>
 
@@ -636,16 +499,16 @@
   <script src="../../../assets/vendors/core/core.js"></script>
   <!-- endinject -->
   <!-- plugin js for this page -->
-  <script src="../../../assets/vendors/datatables.net/jquery.dataTables.js"></script>
-  <script src="../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <!-- end plugin js for this page -->
   <!-- inject:js -->
   <script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
   <script src="../../../assets/js/template.js"></script>
   <!-- endinject -->
   <!-- custom js for this page -->
-  <script src="../../../assets/js/data-table.js"></script>
   <!-- end custom js for this page -->
+  <script src="../../../assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+  <script src="../../../assets/vendors/promise-polyfill/polyfill.min.js"></script>
+  <script src="../../../assets/js/sweet-alert.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>درخواست های پشتیبانی</title>
+  <title>مدیریت سرویس ها</title>
   <!-- core:css -->
   <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
   <!-- endinject -->
@@ -162,7 +162,8 @@
                   <i data-feather="search"></i>
                 </div>
               </div>
-              <input type="text" class="form-control" name="main-search" id="navbarForm" placeholder="جستجو ...">              
+              <input type="text" class="form-control" name="main-search" id="navbarForm" placeholder="جستجو ...">
+              
             </div>
           </form>
 
@@ -346,7 +347,7 @@
             <li class="nav-item dropdown nav-profile">
               <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img src="../../../assets/images/admin.jpg" alt="userr" style="padding: 3px;">
+                <img src="../../../assets/images/admin.jpg" alt="userr" style="padding: 4px;">
               </a>
 
               <div class="dropdown-menu" aria-labelledby="profileDropdown">
@@ -406,7 +407,7 @@
         <nav class="page-breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">خانه</a></li>
-            <li class="breadcrumb-item active" aria-current="page">درخواست های پشتیبانی</li>
+            <li class="breadcrumb-item active" aria-current="page">مدیریت سرویس ها</li>
           </ol>
         </nav>
 
@@ -414,11 +415,55 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
+                
                 <div style="margin-top: 20px;margin-bottom: 20px;">
 
                   <!-- Large modal -->
-              <button type="button" class="btn btn-primary" ><a href="../general/blank-page.html" style="color:white">ارسال درخواست پشتیبانی</a></button>
-              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+
+                  
+      <div style="display: inline-flex;">
+
+
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-right: 30px;">
+              ایجاد صورتحساب
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">اطلاعات صورت حساب</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                   
+                    <div class="form-check">
+											<label class="form-check-label">
+												<input type="checkbox" class="form-check-input">
+												صورت حساب میان دوره : 10000 ریال
+                      </label>
+                    </div>
+                    <div class="form-check">
+											<label class="form-check-label">
+												<input type="checkbox" class="form-check-input">
+												صورت حساب پایان دوره : 20000 ریال
+                      </label>
+										</div>
+                   
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-success">پرداخت</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> -->
+                  
+              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <p>موضوع تیکت</p>
@@ -427,115 +472,145 @@
               </div>
                 </div>
 
-                <div class="table-responsive">
+                <div class="table-responsive" style="margin-top:50px">
                   <table id="dataTableExample" class="table">
                     <thead>
                       <tr>
-                        <th style="text-align: right;color:black;">تاریخ</th>
-                        <th style="text-align: right;color:black;">واحد</th>
-                        <th style="text-align: right;color:black;">موضوع </th>
-                        <th style="text-align: right;color:black;">وضعیت</th>
+                        <th style="text-align: right;color:black;">کد سرویس</th>
+                        <th style="text-align: right;color:black;">نوع سرویس</th>
+                        <th style="text-align: right;color:black;">گروه</th>
+                        <th style="text-align: right;color:black;">حجم مصرف شده</th>
                         <th style="text-align: right;color:black;">آخرین تغییر</th>
-                        <th style="text-align: right;color:black;">عملیات</th>
+                        <th style="text-align: right;color:black;">نام بسته</th>
+                        <th style="text-align: right;color:black;">تاریخ اتمام</th>
+                        <th style="text-align: right;color:black;">وضعیت سیم کارت</th>
+                        <th style="text-align: right;color:black;">شماره موبایل</th>
+                        
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
+                        <td>1</td>
+                        <td>پیامک</td>
+                        <td>داخل شبکه</td>
+                        <td>بسته شده</td>
+                        <td>مصرف شده 20:19 دقیقه</td>
+                        <td>مدیران</td>
                         <td>1399/10/10</td>
-                        <td>1</td>
-                        <td>تست</td>
+                        <td>فعال</td>
+                        <td>0912984309</td>
+                      </tr>
+
+                      <tr>
+                        <tr>
+                          <td>2</td>
+                          <td>اینترنت</td>
+                          <td>خارج شبکه</td>
+                          <td>بسته شده</td>
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
+                          <td>1399/10/10</td>
+                          <td>فعال</td>
+                          <td>0912984309</td>
+                        </tr>
+                      </tr>
+
+                      <tr>
+                        <tr>
+                          <td>3</td>
+                          <td>تماس</td>
+                          <td>خارج شبکه</td>
+                          <td>بسته شده</td>
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
+                          <td>1399/10/10</td>
+                          <td>فعال</td>
+                          <td>0912984309</td>       
+                        </tr>
+                      </tr>
+
+                      <tr>
+                        <tr>
+                          <td>4</td>
+                          <td>تماس</td>
+                          <td>خارج شبکه</td>
+                          <td>بسته شده</td>
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
+                          <td>1399/10/10</td>
+                          <td>فعال</td>
+                          <td>0912984309</td>
+                        </tr>
+                      </tr>
+
+                      <tr>
+                        <tr>
+                          <td>4</td>
+                          <td>پیامک</td>
+                          <td>خارج شبکه</td>
+                          <td>بسته شده</td>
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
+                          <td>1399/10/10</td>
+                          <td>فعال</td>
+                          <td>0912984309</td>    
+                        </tr>
+                      </tr>
+
+                      <tr>
+                        <tr>
+                          <td>5</td>
+                        <td>اینترنت</td>
+                        <td>خارج شبکه</td>
                         <td>بسته شده</td>
-                        <td>1399/01/10 | 20:32:12</td>
-                        <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white;">نمایش</button></a></td>
-                        
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
-                          <td>بسته شده</td>
-                          <td>1399/01/10 | 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>
-                          
+                        <td>مصرف شده 20:19 دقیقه</td>
+                        <td>مدیران</td>
+                        <td>1399/10/10</td>
+                        <td>فعال</td>
+                        <td>0912984309</td>
                         </tr>
                       </tr>
 
                       <tr>
                         <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
+                          <td>6</td>
+                          <td>اینترنت</td>
+                          <td>خارج شبکه</td>
                           <td>بسته شده</td>
-                          <td>1399/01/10 | 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>                          
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
+                          <td>1399/10/10</td>
+                          <td>فعال</td>
+                          <td>0912984309</td>
                         </tr>
                       </tr>
 
                       <tr>
                         <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
+                          <td>7</td>
+                          <td>تماس</td>
+                          <td>خارج شبکه</td>
                           <td>بسته شده</td>
-                          <td>1399/01/10 | 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
+                          <td>1399/10/10</td>
+                          <td>فعال</td>
+                          <td>0912984309</td>
                         </tr>
                       </tr>
 
                       <tr>
                         <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
+                          <td>8</td>
+                          <td>پیامک</td>
+                          <td>خارج شبکه</td>
                           <td>بسته شده</td>
-                          <td>1399/01/10 | 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>    
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
+                          <td>مصرف شده 20:19 دقیقه</td>
+                          <td>مدیران</td>
                           <td>1399/10/10</td>
-                        <td>1</td>
-                        <td>تست</td>
-                        <td>بسته شده</td>
-                        <td>1399/01/10 | 20:32:12</td>
-                        <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
-                          <td>بسته شده</td>
-                          <td>1399/01/10 | 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>
-                        </tr>
-                      </tr>
-
-                      <tr>
-                        <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
-                          <td>بسته شده</td>
-                          <td>1399/01/10| 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>
-                        </tr>
-                      </tr>
-                      <tr>
-                        <tr>
-                          <td>1399/10/10</td>
-                          <td>1</td>
-                          <td>تست</td>
-                          <td>بسته شده</td>
-                          <td>1399/01/10| 20:32:12</td>
-                          <td><button type="button" class="btn btn-primary"><a href="../general/blank-page -10.html" style="color:white">نمایش</button></a></td>
+                          <td>فعال</td>
+                          <td>0912984309</td>
                         </tr>
                       </tr>
                      
