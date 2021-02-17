@@ -40,7 +40,7 @@
         <ul class="nav">
           
           <li class="nav-item">
-            <a href="dashboard-one.html" class="nav-link">
+            <a href="dashboard-one.html" class="nav-link" style="color:#4bf01b">
 
               <i data-feather="home" style="padding: 3px;"></i> 
               <span class="link-title">خانه</span>
@@ -48,40 +48,54 @@
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="../demo_3/pages/general/EditProfile.html" class="nav-link">
 
               <i data-feather="user" style="padding: 3px;"></i>
               <span class="link-title">پروفایل من </span>
             </a>
           </li>
 
+
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/Sim-products.html" role="button" aria-expanded="false"
               aria-controls="emails">
-              <i data-feather="shopping-cart" style="padding: 3px;"></i>
-              <span class="link-title">خرید بسته افزایشی</span>
+              <i data-feather="credit-card" style="padding: 3px;"></i>
+              <span class="link-title">خرید سیم کارت</span>
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/products1.html" role="button" aria-expanded="false"
+              aria-controls="emails">
+              <i data-feather="shopping-cart" style="padding: 3px;"></i>
+              <span class="link-title">خرید بسته </span>
+            </a>
+          </li>
+
+        
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false"
               aria-controls="tables">
 
               <i data-feather="book-open" style="padding: 3px;"></i>
-              <span class="link-title">تاریخچه</span>
+              <span class="link-title">خدمات من</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
+
             <div class="collapse" id="tables">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/tables/basic-table.html" class="nav-link">گزارش مصرف بسته 2 روز اخیر</a>
+                  <a href="../demo_3/pages/general/HistoryTable2.html" class="nav-link">تاریخچه بسته ها</a>
                 </li>
+
                 <li class="nav-item">
-                  <a href="pages/tables/data-table.html" class="nav-link">گزارش خرید بسته های افزایشی</a>
+                  <a href="../demo_3/pages/general/InvoiceTable.html" class="nav-link">صورتحساب</a>
                 </li>
+                
                 <li class="nav-item">
-                  <a href="pages/tables/data-table.html" class="nav-link">گزارش مصرف بسته دوره های قبل</a>
+                  <a href="https://www.ariantel.ir/مناطق-تحت-پوشش" class="nav-link">مناطق تحت پوشش</a>
                 </li>
+
               </ul>
 
               <li class="nav-item">
@@ -91,51 +105,278 @@
                   <span class="link-title">پشتیبانی</span>
                   <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
+
                 <div class="collapse" id="uiComponents">
                   <ul class="nav sub-menu">
                     <li class="nav-item">
-                      <a href="pages/ui-components/alerts.html" class="nav-link">تماس تلفنی</a>
+                      <a href="../demo_3/pages/general/ContactUs.html" class="nav-link">تماس تلفنی</a>
                     </li>
+
                     <li class="nav-item">
-                      <a href="pages/ui-components/badges.html" class="nav-link">چت آنلاین</a>
+                      <a href="../demo_3/pages/general/Support-form.html" class="nav-link">ارسال تیکت</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="../demo_3/pages/tables/MyTickets.html" class="nav-link">تیکت های من</a>
+                    </li>
+
+                  </ul>
+
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="" href="../demo_3/pages/auth/login -repass.html" role="button" aria-expanded="false"
+                  aria-controls="forms">
+                  <i data-feather="key" style="padding: 3px;"></i>
+                  <span class="link-title">تغییر رمز عبور</span>
+                  
+                </a>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-feather="log-out" style="padding: 3px;"></i> 
+                  <span class="link-title">خروج از حساب</span>
+                </a>
+              </li>
+              </li>
+            
+          </div>
+        </nav>
+    <!-- partial -->
+
+    <div class="page-wrapper">
+
+      <nav class="navbar">
+        <a href="#" class="sidebar-toggler">
+          <i data-feather="menu"></i>
+        </a>
+        <div class="navbar-content">
+          <form class="search-form" action="#">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i data-feather="search"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control" name="main-search" id="navbarForm" placeholder="جستجو ...">
+            </div>
+          </form>
+          <ul class="navbar-nav">
+            
+            <div style="margin-top:10px;margin-left:10px">
+               <button type="button" class="btn btn-success" style="width:100px;height: 35px;margin-top:3px;"><a href="../demo_3/pages/tables/shopping-box.html" style="color:white">سبد خرید</button> </a>
+            </div>
+
+            <li class="nav-item dropdown nav-messages">
+              <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i data-feather="mail"></i>
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="messageDropdown">
+                <div class="dropdown-header d-flex align-items-center justify-content-between">
+                  <p class="mb-0 font-weight-medium">9 پیغام جدید</p>
+                  <a href="javascript:;" class="text-muted">پاک کردن همه</a>
+              </div>
+
+                <div class="dropdown-body">
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="figure">
+                      <img src="../assets/images/admin.jpg" alt="userr">
+                </div>
+
+                    <div class="content">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>رضا افشار</p>
+                        <p class="sub-text text-muted">2 دقیقه قبل</p>
+                      </div>
+                      <p class="sub-text text-muted">وضعیت پروژه</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="figure">
+                      <img src="../assets/images/admin.jpg" alt="userr">
+                    </div>
+                    <div class="content">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>پریسا توکلی</p>
+                        <p class="sub-text text-muted">30 دقیقه قبل</p>
+                      </div>
+                      <p class="sub-text text-muted">جلسه</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="figure">
+                      <img src="../assets/images/admin.jpg" alt="userr">
+                    </div>
+
+                    <div class="content">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>پدرام شریفی</p>
+                        <p class="sub-text text-muted">1 ساعت قبل</p>
+                      </div>
+                      <p class="sub-text text-muted">به روز رسانی پروژه</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="figure">
+                      <img src="../assets/images/admin.jpg" alt="userr">
+                    </div>
+                    <div class="content">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>آرزو محبی</p>
+                        <p class="sub-text text-muted">2 ساعت قبل</p>
+                      </div>
+                      <p class="sub-text text-muted">پایان پروژه</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="figure">
+                      <img src="../assets/images/admin.jpg" alt="userr">
+                    </div>
+                    <div class="content">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>نرگس علیپور</p>
+                        <p class="sub-text text-muted">5 ساعت قبل</p>
+                      </div>
+                      <p class="sub-text text-muted">رکورد جدید</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-footer d-flex align-items-center justify-content-center">
+                  <a href="javascript:;">مشاهده همه</a>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown nav-notifications">
+              <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i data-feather="bell"></i>
+                <div class="indicator">
+                  <div class="circle"></div>
+                </div>
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="notificationDropdown">
+                <div class="dropdown-header d-flex align-items-center justify-content-between">
+                  <p class="mb-0 font-weight-medium">6 اعلان جدید</p>
+                  <a href="javascript:;" class="text-muted">پاک کردن همه</a>
+                </div>
+
+                <div class="dropdown-body">
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="icon">
+                      <i data-feather="user-plus"></i>
+                    </div>
+                    
+                    <div class="content">
+                      <p>کاربر جدید ثبت نام کرد</p>
+                      <p class="sub-text text-muted">2 ثانیه قبل</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="icon">
+                      <i data-feather="gift"></i>
+                    </div>
+
+                    <div class="content">
+                      <p>سفارش جدید دریافت شد</p>
+                      <p class="sub-text text-muted">30 دقیقه قبل</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="icon">
+                      <i data-feather="alert-circle"></i>
+                    </div>
+
+                    <div class="content">
+                      <p>محدودیت سرور!</p>
+                      <p class="sub-text text-muted">1 ساعت قبل</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="icon">
+                      <i data-feather="layers"></i>
+                    </div>
+
+                    <div class="content">
+                      <p>برنامه ها نیاز به به روز رسانی دارند</p>
+                      <p class="sub-text text-muted">5 ساعت قبل</p>
+                    </div>
+                  </a>
+
+                  <a href="javascript:;" class="dropdown-item">
+                    <div class="icon">
+                      <i data-feather="download"></i>
+                    </div>
+                    <div class="content">
+                      <p>دانلود تکمیل شد</p>
+                      <p class="sub-text text-muted">6 ساعت قبل</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-footer d-flex align-items-center justify-content-center">
+                  <a href="javascript:;">مشاهده همه</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown nav-profile">
+              <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="../assets/images/admin.jpg" alt="userr" style="padding: 4px;">
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                <div class="dropdown-header d-flex flex-column align-items-center">
+                  <div class="figure mb-3">
+                    <img src="../assets/images/admin.jpg" alt="">
+                  </div>
+
+                  <div class="info text-center">
+                    <p class="name font-weight-bold mb-0">امیر امیری</p>
+                    <p class="email text-muted mb-3">0912908398</p>
+                  </div>
+                </div>
+
+                <div class="dropdown-body">
+                  <ul class="profile-nav p-0 pt-3">
+                    <li class="nav-item">
+                      <a href="pages/general/profile.html" class="nav-link">
+                        <i data-feather="user"></i>
+                        <span>پروفایل</span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="javascript:;" class="nav-link">
+                        <i data-feather="edit"></i>
+                        <span>ویرایش پروفایل</span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="javascript:;" class="nav-link">
+                        <i data-feather="log-out"></i>
+                        <span>خروج</span>
+                      </a>
                     </li>
                   </ul>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
-              aria-controls="uiComponents">
-              <i data-feather="map-pin" style="padding: 3px;"></i> 
-              <span class="link-title">مناطق تحت پوشش</span>
-          </a>
-
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#forms" role="button" aria-expanded="false"
-              aria-controls="forms">
-              <i data-feather="user-check" style="padding: 3px;"></i> 
-              <span class="link-title">احراز هویت</span>
-              <i class="link-arrow" data-feather="chevron-down"></i>
-            </a>
-            <div class="collapse" id="forms">
-              <ul class="nav sub-menu">
-                <li class="nav-item">
-                  <a href="pages/forms/basic-elements.html" class="nav-link">ایمیل</a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/forms/advanced-elements.html" class="nav-link">ارسال رمز یکبار مصرف</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="nav-item">
-            <a href="pages/apps/calendar-jalali.html" class="nav-link">
-              <i data-feather="log-out" style="padding: 3px;"></i> 
-              <span class="link-title">خروج از حساب</span>
-            </a>
-          </li>
-          </li>
-         
-      </div>
-    </nav>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     
     <!-- partial -->
 
@@ -203,7 +444,7 @@
                 <div class="dropdown-body">
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/face3.jpg" alt="userr">
+                      <img src="" alt="userr">
                     </div>
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
@@ -215,7 +456,7 @@
                   </a>
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/face2.jpg" alt="userr">
+                      <img src="" alt="userr">
                     </div>
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
@@ -227,7 +468,7 @@
                   </a>
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../../../assets/images/face4.jpg" alt="userr">
+                      <img src="" alt="userr">
                     </div>
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
