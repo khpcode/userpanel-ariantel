@@ -1,10 +1,10 @@
 {
-  "name": "ArianTell",
-  "version": "1.4.0",
+  "name": "ArianTel",
+  "version": "1.0.0",
   "description": "Responsive userpanel with bootstrap,html,css,js",
   "description2" : "set git(control version) in this project",
   "main": "index.html",
-  "author": "",
+  "author": "khashayar panbeian",
   "license": "",
   "dependencies": {
     "@mdi/font": "^5.3.45",

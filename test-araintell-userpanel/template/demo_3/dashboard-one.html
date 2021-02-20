@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>پنل کاربری آرین تل</title>
+  <title>داشبورد</title>
   <!-- core:css -->
-  <link rel="stylesheet" href="../assets/vendors/core/core.css">
+  <link rel="stylesheet"   href="../assets/vendors/core/core.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="../assets/css/persian-datepicker-0.4.5.min.css">
@@ -18,33 +18,31 @@
   <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css">
   <!-- endinject -->
   <!-- Layout styles -->
+  <link rel="stylesheet" href="../../../assets/vendors/sweetalert2/sweetalert2.min.css">
   <link rel="stylesheet" href="../assets/css/demo_1/style.css">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="../assets/images/fav.png" />
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- 
 </head>
 
-<body class="sidebar-dark rtl">
+<body class="rtl">
   <div class="main-wrapper">
-
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar">
-      <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
-          Arian<span>Tel</span>
-        </a>
+      <div class="sidebar-header" style="background-color: #1d1d1b;border: 1px solid gray">
+ 
+        <img src="../assets/images/ariantel.png" alt="pic" style="width: 100px;height: 40px;">
         <div class="sidebar-toggler not-active">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-      <div class="sidebar-body">
+
+      <div class="sidebar-body" style="background-color: #1d1d1b;border-right: none;">
         <ul class="nav">
           
           <li class="nav-item">
-            <a href="dashboard-one.html" class="nav-link">
+            <a href="dashboard-one.html" class="nav-link" style="color:#4bf01b">
 
               <i data-feather="home" style="padding: 3px;"></i> 
               <span class="link-title">خانه</span>
@@ -52,44 +50,67 @@
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="../demo_3/pages/general/EditProfile.html" class="nav-link">
 
               <i data-feather="user" style="padding: 3px;"></i>
               <span class="link-title">پروفایل من </span>
             </a>
           </li>
 
-
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false"
+            <a class="nav-link" data-toggle="" href="../demo_3/pages/general/Sim-products.html" role="button" aria-expanded="false"
               aria-controls="emails">
-              <i data-feather="shopping-cart" style="padding: 3px;"></i>
-              <span class="link-title">خرید بسته افزایشی</span>
+              <i data-feather="credit-card" style="padding: 3px;"></i>
+              <span class="link-title">خرید سیم کارت</span>
             </a>
           </li>
+
+          <li class="nav-item">
+						<a class="nav-link" data-toggle="collapse" href="#charts" role="button" aria-expanded="false"
+							aria-controls="charts">
+							<i data-feather="shopping-cart" style="padding: 3px;"></i>
+							<span class="link-title">خرید بسته</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+						</a>
+						<div class="collapse" id="charts">
+							<ul class="nav sub-menu">
+								<li class="nav-item">
+									<a href="../demo_3/pages/general/Internet-products.html" class="nav-link">بسته اینترنت</a>
+								</li>
+								<li class="nav-item">
+									<a href="../demo_3/pages/general/Compound-products.html" class="nav-link">بسته ترکیبی</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">بسته سازمانی</a>
+								</li>
+							</ul>
+						</div>
+					</li>
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false"
               aria-controls="tables">
 
               <i data-feather="book-open" style="padding: 3px;"></i>
-              <span class="link-title">تاریخچه</span>
+              <span class="link-title">خدمات من</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
+
             <div class="collapse" id="tables">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/tables/basic-table.html" class="nav-link">گزارش مصرف بسته 2 روز اخیر</a>
+                  <a href="../demo_3/pages/general/HistoryTable2.html" class="nav-link">تاریخچه بسته ها</a>
                 </li>
+
                 <li class="nav-item">
-                  <a href="pages/tables/data-table.html" class="nav-link">گزارش خرید بسته های افزایشی</a>
+                  <a href="../demo_3/pages/general/InvoiceTable.html" class="nav-link">صورتحساب</a>
                 </li>
+                
                 <li class="nav-item">
-                  <a href="pages/tables/data-table.html" class="nav-link">گزارش مصرف بسته دوره های قبل</a>
+                  <a href="https://www.ariantel.ir/مناطق-تحت-پوشش" class="nav-link">مناطق تحت پوشش</a>
                 </li>
+
               </ul>
-
-
 
               <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
@@ -98,142 +119,65 @@
                   <span class="link-title">پشتیبانی</span>
                   <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
+
                 <div class="collapse" id="uiComponents">
                   <ul class="nav sub-menu">
                     <li class="nav-item">
-                      <a href="pages/ui-components/alerts.html" class="nav-link">تماس تلفنی</a>
+                      <a href="../demo_3/pages/general/ContactUs.html" class="nav-link">تماس تلفنی</a>
                     </li>
+
                     <li class="nav-item">
-                      <a href="pages/ui-components/badges.html" class="nav-link">چت آنلاین</a>
+                      <a href="../demo_3/pages/general/Support-form.html" class="nav-link">ارسال تیکت</a>
                     </li>
+
+                    <li class="nav-item">
+                      <a href="../demo_3/pages/tables/MyTickets.html" class="nav-link">تیکت های من</a>
+                    </li>
+
                   </ul>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false"
-              aria-controls="uiComponents">
-              <i data-feather="map-pin" style="padding: 3px;"></i> 
-              <span class="link-title">مناطق تحت پوشش</span>
-          </a>
 
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#forms" role="button" aria-expanded="false"
-              aria-controls="forms">
-              <i data-feather="user-check" style="padding: 3px;"></i> 
-              <span class="link-title">احراز هویت</span>
-              <i class="link-arrow" data-feather="chevron-down"></i>
-            </a>
-            <div class="collapse" id="forms">
-              <ul class="nav sub-menu">
-                <li class="nav-item">
-                  <a href="pages/forms/basic-elements.html" class="nav-link">ایمیل</a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/forms/advanced-elements.html" class="nav-link">ارسال رمز یکبار مصرف</a>
-                </li>
-              </ul>
-            </div>
-          </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="" href="../demo_3/pages/auth/login - resetpassword.html" role="button" aria-expanded="false"
+                  aria-controls="forms">
+                  <i data-feather="key" style="padding: 3px;"></i>
+                  <span class="link-title">تغییر رمز عبور</span>
+                  
+                </a>
 
-          <li class="nav-item">
-            <a href="pages/apps/calendar-jalali.html" class="nav-link">
-              <i data-feather="log-out" style="padding: 3px;"></i> 
-              <span class="link-title">خروج از حساب</span>
-            </a>
-          </li>
-          </li>
-         
-      </div>
-    </nav>
-    <nav class="settings-sidebar">
-      <div class="sidebar-body">
-       
-        </a>
-        <h6 class="text-muted">سایدبار : </h6>
-        <div class="form-group border-bottom">
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarLight"
-                value="sidebar-light">
-              روشن
-            </label>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i data-feather="log-out" style="padding: 3px;"></i> 
+                  <span class="link-title">خروج از حساب</span>
+                </a>
+              </li>
+              </li>
+            
           </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="sidebarThemeSettings" id="sidebarDark"
-                value="sidebar-dark" checked>
-              تیره
-            </label>
-          </div>
-        </div>
-
-        <div class="theme-wrapper">
-          <h6 class="text-muted mb-2">تم روشن : </h6>
-          <a class="theme-item active" href="../demo_1/dashboard-one.html">
-            <img src="../assets/images/screenshots/light.jpg" alt="light theme">
-          </a>
-          <h6 class="text-muted mb-2">تم تیره : </h6>
-          <a class="theme-item" href="../demo_2/dashboard-one.html">
-            <img src="../assets/images/screenshots/dark.jpg" alt="light theme">
-          </a>
-        </div>
-      </div>
-    </nav>
+        </nav>
     <!-- partial -->
 
     <div class="page-wrapper">
 
-      <!-- partial:partials/_navbar.html -->
       <nav class="navbar">
         <a href="#" class="sidebar-toggler">
           <i data-feather="menu"></i>
         </a>
         <div class="navbar-content">
-          <form class="search-form">
+          <form class="search-form" action="#">
             <div class="input-group">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <i data-feather="search"></i>
                 </div>
               </div>
-              <input type="text" class="form-control" id="navbarForm" placeholder="جستجو ...">
-             
+              <input type="text" class="form-control" name="main-search" id="navbarForm" placeholder="جستجو ...">
             </div>
           </form>
           <ul class="navbar-nav">
-           
-            <li class="nav-item dropdown nav-apps">
-              <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i data-feather="grid"></i>
-              </a>
-
-              
-              <div class="dropdown-menu" aria-labelledby="appsDropdown">
-                <div class="dropdown-header d-flex align-items-center justify-content-between">
-                  <p class="mb-0 font-weight-medium">برنامه ها</p>
-                  <a href="javascript:;" class="text-muted">ویرایش</a>
-              </div>
-                
-                <div class="dropdown-body">
-                  <div class="d-flex align-items-center apps">
-                    <a href="pages/apps/chat.html"><i data-feather="message-square" class="icon-lg"></i>
-                      <p>گفتگو</p>
-                    </a>
-                    <a href="pages/apps/calendar.html"><i data-feather="calendar" class="icon-lg"></i>
-                      <p>تقویم</p>
-                    </a>
-                    <a href="pages/email/inbox.html"><i data-feather="mail" class="icon-lg"></i>
-                      <p>ایمیل</p>
-                    </a>
-                    <a href="pages/general/profile.html"><i data-feather="instagram" class="icon-lg"></i>
-                      <p>پروفایل</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="dropdown-footer d-flex align-items-center justify-content-center">
-                  <a href="javascript:;">مشاهده همه</a>
-                </div>
-              </div>
-            </li>
+            
+            <div style="margin-top:10px;margin-left:10px">
+               <button type="button" class="btn btn-success" style="width:100px;height: 35px;margin-top:3px;"><a href="../demo_3/pages/tables/shopping-box.html" style="color:white">سبد خرید</button> </a>
+            </div>
 
             <li class="nav-item dropdown nav-messages">
               <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown"
@@ -245,29 +189,27 @@
                 <div class="dropdown-header d-flex align-items-center justify-content-between">
                   <p class="mb-0 font-weight-medium">9 پیغام جدید</p>
                   <a href="javascript:;" class="text-muted">پاک کردن همه</a>
-                </div>
+              </div>
 
                 <div class="dropdown-body">
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../assets/images/face3.jpg" alt="userr">
-                    </div>
+                      <img src="../assets/images/admin.jpg" alt="userr">
+                </div>
 
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
                         <p>رضا افشار</p>
                         <p class="sub-text text-muted">2 دقیقه قبل</p>
                       </div>
-
                       <p class="sub-text text-muted">وضعیت پروژه</p>
                     </div>
                   </a>
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../assets/images/face2.jpg" alt="userr">
+                      <img src="../assets/images/admin.jpg" alt="userr">
                     </div>
-
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
                         <p>پریسا توکلی</p>
@@ -279,7 +221,7 @@
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../assets/images/face4.jpg" alt="userr">
+                      <img src="../assets/images/admin.jpg" alt="userr">
                     </div>
 
                     <div class="content">
@@ -287,16 +229,14 @@
                         <p>پدرام شریفی</p>
                         <p class="sub-text text-muted">1 ساعت قبل</p>
                       </div>
-
                       <p class="sub-text text-muted">به روز رسانی پروژه</p>
                     </div>
                   </a>
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../assets/images/face5.jpg" alt="userr">
+                      <img src="../assets/images/admin.jpg" alt="userr">
                     </div>
-                    
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
                         <p>آرزو محبی</p>
@@ -308,9 +248,8 @@
 
                   <a href="javascript:;" class="dropdown-item">
                     <div class="figure">
-                      <img src="../assets/images/face6.jpg" alt="userr">
+                      <img src="../assets/images/admin.jpg" alt="userr">
                     </div>
-
                     <div class="content">
                       <div class="d-flex justify-content-between align-items-center">
                         <p>نرگس علیپور</p>
@@ -326,6 +265,7 @@
                 </div>
               </div>
             </li>
+            
 
             <li class="nav-item dropdown nav-notifications">
               <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button"
@@ -347,7 +287,7 @@
                     <div class="icon">
                       <i data-feather="user-plus"></i>
                     </div>
-
+                    
                     <div class="content">
                       <p>کاربر جدید ثبت نام کرد</p>
                       <p class="sub-text text-muted">2 ثانیه قبل</p>
@@ -391,7 +331,6 @@
                     <div class="icon">
                       <i data-feather="download"></i>
                     </div>
-
                     <div class="content">
                       <p>دانلود تکمیل شد</p>
                       <p class="sub-text text-muted">6 ساعت قبل</p>
@@ -408,7 +347,7 @@
             <li class="nav-item dropdown nav-profile">
               <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img src="../assets/images/admin.jpg" style="padding: 4px;" alt="userr">
+                <img src="../assets/images/admin.jpg" alt="userr" style="padding: 4px;">
               </a>
 
               <div class="dropdown-menu" aria-labelledby="profileDropdown">
@@ -416,39 +355,33 @@
                   <div class="figure mb-3">
                     <img src="../assets/images/admin.jpg" alt="">
                   </div>
+
                   <div class="info text-center">
-                    <p class="name font-weight-bold mb-0">خشایار پنبه ئیان</p>
-                    <p class="email text-muted mb-3">kpanbian@gmail.com</p>
+                    <p class="name font-weight-bold mb-0">امیر امیری</p>
+                    <p class="email text-muted mb-3">0912908398</p>
                   </div>
                 </div>
 
                 <div class="dropdown-body">
                   <ul class="profile-nav p-0 pt-3">
                     <li class="nav-item">
-                      <a href="pages/general/profile.html" class="nav-link">
-                        <i data-feather="user" style="color:darkgreen"></i>
-                        <span style="color:darkgreen">پروفایل</span>
+                      <a href="../demo_3/pages/general/EditProfile.html" class="nav-link">
+                        <i data-feather="user"></i>
+                        <span>پروفایل</span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="../demo_3/pages/general/EditProfile.html" class="nav-link">
+                        <i data-feather="edit"></i>
+                        <span>ویرایش پروفایل</span>
                       </a>
                     </li>
 
                     <li class="nav-item">
                       <a href="javascript:;" class="nav-link">
-                        <i data-feather="edit" style="color:darkgreen"></i>
-                        <span style="color:darkgreen">ویرایش پروفایل</span>
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a href="javascript:;" class="nav-link">
-                        <i data-feather="repeat" style="color:Darkgreen;"></i>
-                        <span style="color:darkgreen">افراد مرتبط با من</span>
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a href="javascript:;" class="nav-link">
-                        <i data-feather="log-out" style="color:darkgreen;"></i>
-                        <span style="color:darkgreen;">خروج</span>
+                        <i data-feather="log-out"></i>
+                        <span>خروج</span>
                       </a>
                     </li>
                   </ul>
@@ -457,127 +390,216 @@
             </li>
           </ul>
         </div>
-      </nav> 
+      </nav>
       <!-- partial -->
 
-      <!--Dashboard Homepage-->
       <div class="page-content">
+
         <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
           <div>
-            <h4 class="mb-3 mb-md-0">خشایار پنبه ئیان عزیز به پنل کاربری خوش آمدید</h4><br/>
-            <h5 style="text-align: right;">0912873783</h5><br/>
-           <h4 style="text-align: right;">موجودی کل 0 ریال</h4>
-          </div>
-          
-          <!-- <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <button type="button" class="btn btn-primary btn-lg">خرید بسته</button>
-          </div>
-           -->
-
-          <div class="d- align-items-center flex-wrap text-nowrap">
-            <button type="button" class="btn btn-primary btn-lg">خرید بسته اینترنت</button>
-
-            <button type="button" class="btn btn-success btn-lg">افزایش موجودی حساب</button>
+            <h4 class="mb-3 mb-md-0">به داشبورد خوش آمدید</h4><br/>
+            <h4 class="mb-3 mb-md-0">امیر امیری</h4><br/>
+            <h4 class="mb-3 mb-md-0">0912908398</h4>
           </div>
 
-         
+          <div class="d-flex align-items-center flex-wrap text-nowrap">
+            
+            <button type="button" class="btn btn-outline-primary btn-icon-text ml-2 d-none d-md-block">
+              <i data-feather="credit-card" style="padding:3px;"></i><a href="../demo_3/pages/general/Sim-products.html" style="color:black">
+                خرید سیم کارت   
+            </button></a>
+
+
+            <button type="button" class="btn btn-outline-danger btn-icon-text ml-2 d-none d-md-block">
+              <i data-feather="credit-card" style="padding:3px;"></i><a href="../demo_3/pages/general/products1.html" style="color:black;">
+                خرید بسته جدید
+            </button></a>
+
+            <button type="button" class="btn btn-success btn-icon-text mb-2 mb-md-0">
+              <i data-feather="shopping-cart" style="padding: 4px;"></i><a href="../demo_3/pages/general/AddAccount.html" style="color:white">
+               افزایش موجودی حساب 
+            </button></a>
+          </div>
         </div>
-
-      <!--main box-->
-        <!-- <div class="row">
-          <div class="col-12 col-xl-12 stretch-card">
-            <div class="row flex-grow"> -->
+ 
+<!--progrees bar & tables-->
 
 
-              <div class="row">
-                <div class="col-md-12 grid-margin">
-                  <div class="page-content page-container" id="page-content">
-                      <div class="padding">
-                          <div class="row container d-flex justify-content-center">
-                            
-                                  <div class="card" style="border: 1px solid  gray;">
-                                      <div class="card-body" style="margin-right:120px;">
-                                          <h4 class="card-title" style="font-size: 20px;">میزان حجم مصرفی</h4>
-                                          <p style="color:blue;">کارکرد مصرفی دوره قبل : 12,12 ریال</p>
-                                          <p style="color:blue;">کار کرد مصرفی دوره فعلی : 1298 ریال</p>
-                                          <div class="row px-6 template-demo" style="margin-top: 30px;">
-                                              <div class="col-sm-3 col-md-3 col-2 circle-progress-block">
-                                                  <div id="circleProgress1" class="progressbar-js-circle border rounded p-3" ><svg viewBox="0 0 100 100" style="display: block; width: 100%;">
-                                                          <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#eee" stroke-width="4" fill-opacity="0"></path>
-                                                          <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgb(3, 252, 61)" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 199.079;"></path>
-                                                      </svg>
-                                                      <div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(0, 0, 0); font-size: 14px;text-align: center;">500 مگ (ماهیانه)</div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body" style="padding: 30px 30px;">
-                    <div class="d-flex justify-content-between align-items-baseline" style="margin-left: 60px;">
-                      <h4>سرویس های من </h4>
-                      <div class="dropdown mb-2">
-                      </div>
-                    </div>          
-                  </div>
-                  <a class="btn btn-primary" href="#" role="button" style="padding: 10px;">مشاهده و ویرایش</a>
-                </div>
-              </div> -->
-
-              <!-- <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body" style="padding: 30px 30px;">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h4 class="">درخواست های در حال انجام</h4>
-                      <div class="dropdown mb-2"></div>
-                    </div>
-
-                    <div class="row">
-                    </div>
-                  </div>
-
-                  <a class="btn btn-success" href="#" role="button" style="padding: 10px;">مشاهده و ویرایش</a>
-                </div>
-              </div> -->
-
-              <!-- <div class="col-md-4 grid-margin stretch-card" style="margin-right: 340px;margin-top: 70px;">
-                <div class="card">
-                  <div class="card-body" style="padding: 30px 30px;">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h4>حجم بسته فعلی</h4>
-                      <div class="dropdown mb-2">
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                      </div>
-
-                       <div class="col-6 col-md-12 col-xl-7">
-                      </div>
-                    </div>
-                  </div>
-
-                  <a class="btn btn-warning" href="#" style="color:white;margin-top:30px;padding: 10px;" role="button">مشاهده و ویرایش</a>
-                </div>
-              </div>              
+<div class="row">
+  <div class="col-lg-7 col-xl-8 grid-margin stretch-card" style="box-shadow: 1px 1px 6px #bfbfbf;">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-baseline mb-2">
+          <h6 class="card-title mb-0">ریز گزارش حجم مصرفی </h6>
+          <div class="dropdown mb-2">
+            <button class="btn p-0" type="button" id="dropdownMenuButton4" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton4">
+             
+              <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="printer"
+                  class="icon-sm ml-2"></i> <span class="">چاپ</span></a>
+              <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
+                  class="icon-sm ml-2"></i> <span class="">دانلود</span></a>
             </div>
-          </div>  -->
-         <!-- row -->
+          </div>
+        </div>
+        <p class="text-muted mb-4">نمودار حجم مصرفی در یک سال اخیر</p>
+        <div class="monthly-sales-chart-wrapper">
+          <canvas id="monthly-sales-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 
-         <!-- row -->
+    <!--chartjs dataModel-->
+      <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body" style="box-shadow: 1px 1px 6px #bfbfbf;">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
 
-     
+              <h6 class="card-title mb-0">میزان حجم مصرفی من</h6>
 
+              <div class="dropdown mb-2">
+
+                <button class="btn p-0" type="button" id="dropdownMenuButton5" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton5">
+
+                  <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="printer"
+                      class="icon-sm ml-2"></i> <span class="">چاپ</span></a>
+
+                  <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
+                      class="icon-sm ml-2"></i> <span class="">دانلود</span></a>
+
+                </div>
+              </div>
+            </div>
+            
+            <div id="progressbar1" class="mx-auto"></div>
+            <div class="row mt-4 mb-3">
+              <div class="col-6 d-flex justify-content-end">
+                <div>
+                  <label
+                    class="d-flex align-items-center justify-content-end tx-10 text-uppercase font-weight-medium">کل
+                      حجم بسته <span class="p-1 mr-1 rounded-circle bg-primary-muted"></span></label>
+                  <h5 class="font-weight-bold mb-0 text-left">1GB</h5>
+                </div>
+              </div>
+              <div class="col-6">
+                <div>
+                  <label class="d-flex align-items-center tx-10 text-uppercase font-weight-medium"><span
+                      class="p-1 ml-1 rounded-circle bg-primary"></span>مانده بسته فعلی</label>
+                  <h5 class="font-weight-bold mb-0">200MB</h5>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block"><a href="#" style="color:white" ><a href="../demo_3/pages/general/Tamdid.html" style="color: white;">تمدید بسته فعلی</button></a>                    
+        </div>
+      </div>
+      </div> 
+
+      <!-- row1 -->
+      <!--table-->
+
+      <div class="container-fluid mt-5 d-flex justify-content-center w-200" style="box-shadow: 1px 1px 6px #bfbfbf;">
+        <div class="table-responsive w-100">
+          <h6 style="margin-bottom:30px;margin-top:10px">ریز تراکنش 7 روز اخیر</h6>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="text-align: right;">نوع سرویس </th>
+                <th style="text-align: right;">تاریخ خرید سرویس</th>
+                <th class="text-right">تاریخ  اتمام اعتبار سرویس</th>
+                <th class="text-right">تعداد سرویس ها</th>
+                <th class="text-right">مبلغ پرداختی</th>
+                <th style="text-align: right;">وضعیت سرویس</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right">1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>1</td>
+                <td>110,000 تومان</td>
+                <td style="color:green">فعال</td>
+              </tr>
+
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right">1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>2</td>
+                <td>320,000 تومان</td>
+                <td style="color:red">غیر فعال</td>
+              </tr>
+
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right"> 1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>1</td>
+                <td>150,000 تومان</td>
+                <td style="color:red">غیر فعال</td>
+              </tr>
+
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right"> 1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>1</td>
+                <td>150,000 تومان</td>
+                <td style="color:red">غیر فعال</td>
+              </tr>
+
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right"> 1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>1</td>
+                <td>150,000 تومان</td>
+                <td style="color:red">غیر فعال</td>
+              </tr>
+
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right"> 1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>1</td>
+                <td>150,000 تومان</td>
+                <td style="color:red">غیر فعال</td>
+              </tr>
+              
+              <tr class="text-right">
+                <td class="text-right">400مگابایت شبانه</td>
+                <td class="text-right">1399/02/03</td>
+                <td>13399/03/04</td>
+                <td>1</td>
+                <td>30,000 تومان</td>
+                <td style="color:red">غیر فعال</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div style="padding: 30px;">
+
+      </div>
+
+      
+      
       <!-- partial:partials/_footer.html -->
       <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <p class="text-muted text-center text-md-left">Copyright © 2020، حقوق مادی و معنوی این سایت محفوظ و متعلق به<a href="https://www.ariantel.ir/" style="cursor: pointer;color:rgb(37, 212, 37)"> آرین تل </a> می باشد</p>
+        <p class="text-muted text-center text-md-left">Copyright © 2021،تمامی حقوق مادی و معنوی این سایت متعلق به شرکت <a href="https://www.ariantel.ir" style="color:green;"> آرین تل </a> می باشد </p>
       </footer>
       <!-- partial -->
 
@@ -604,11 +626,8 @@
   <script src="../assets/js/datepicker.js"></script>
   <script src="../assets/js/persian-date-0.1.8.min.js"></script>
   <script src="../assets/js/persian-datepicker-0.4.5.min.js"></script>
-  <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="custom.js"></script>
-
   <!-- end custom js for this page -->
+
 </body>
 
 </html>
