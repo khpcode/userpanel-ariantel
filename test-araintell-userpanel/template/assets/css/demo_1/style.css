@@ -30747,11 +30747,6 @@ address p {
 
 .main-wrapper .page-wrapper.full-page .page-content {
   margin-top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../images/);
-  background-size: cover;
-
 }
 
 @media (max-width: 991px) {
@@ -38043,11 +38038,12 @@ select.border-danger-muted:focus,
 }
 
 .auth-page .auth-left-wrapper {
-   width: 100%;
-  height: 100%;
-  background-image: url(../../images/sky2.jpg);
-  background-size: cover; 
-  
+  width: 100%;
+  height: 92%;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  background-image: url(../../images/baner.png);
+  background-size: cover;
 }
 
 @media (min-width: 992px) {
