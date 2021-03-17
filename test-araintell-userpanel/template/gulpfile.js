@@ -10,6 +10,7 @@ var concat = require('gulp-concat');
 var merge = require('merge-stream');
 var rename = require("gulp-rename");
 let cleanCSS = require('gulp-clean-css');
+const { UPLOADING } = require('dropzone');
 
 
 
@@ -28,6 +29,42 @@ gulp.task('sass', () => {
     return merge(compile, minify);
 });
 
+
+gulp.task('sass', () => {
+    var compile = gulp.src('assets/sccs/**/style.css')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on)    
+})
+
+
+
+gulp.task('sass', () => {
+    var compile = gulp.src('assets/scss/**/style.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(browserSync.stream());
+    var minify = gulp.src('assets/css/**/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({extname: 'min.css'}))
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(browserSync.stream());
+    return merge(compile, minify);
+});
+
+
+gulp.task('sass', () => {
+    var compile = gulp.src('assets/scss/**/style.css')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(browserSync.stream());
+    var minify = gulp.src('assets/css/**/s')
+})
+
+
+
 gulp.task('serve', gulp.series( 'sass', () => {
 
     browserSync.init({
@@ -43,11 +80,13 @@ gulp.task('serve', gulp.series( 'sass', () => {
 
 }));
 
+
 gulp.task('injectPartials', () => {
     return gulp.src("./**/*.html", {base: "./"})
         .pipe(injectPartials())
         .pipe(gulp.dest("."));
 });
+
 
 gulp.task('replacePaths', () => {
     var path1 = gulp.src('./*/pages/*/*.html', {base: './'})
@@ -89,11 +128,40 @@ gulp.task('injectCommonAssets', () => {
     .pipe(gulp.dest('.'));
 });
 
+
 gulp.task('injectCommonJs', () => {
     return gulp.src([
         './index.html'
     ])
 });
+
+
+// gulp.task('injectCommonJs', () => {
+//     return gulp.src([
+//         'mainscript.js'
+//     ])
+// });
+
+
+// // common script of js dir
+// gulp.task('injectCommonJs', () => {
+//     return gulp.script1([
+//         'common.js'
+//     ])
+// });
+
+
+// gulp.task('login.js', () => {
+//     return 
+// })
+
+
+// gulp.task('injectCommonJs', () => {
+//     return gulp.src([
+//         './index.js'
+//     ])
+// })
+
 
 gulp.task('inject', gulp.series('injectPartials','replacePaths', 'injectCommonAssets'));
 
@@ -103,6 +171,7 @@ gulp.task('cleanVendors', () => {
     ]);
 });
 
+
 gulp.task('buildCoreCss', () => {
     return gulp.src([
         './node_modules/perfect-scrollbar/css/perfect-scrollbar.css'
@@ -111,6 +180,23 @@ gulp.task('buildCoreCss', () => {
         .pipe(concat('core.css'))
         .pipe(gulp.dest('./assets/vendors/core'));
 });
+
+
+
+
+//
+
+// gulp.task('buildCoreCss', () => {
+//     return gulp.src([
+//         './node_modules/perfect-scrollbar/css/perfect-scrollbar.css'
+//     ])
+
+//     .pipe(cleanCSS({compatibility: 'ie8'}))
+//     .pipe(concat('core.css'))
+//     .pipe(gulp.dest('./assets/vendors/core'));
+// });
+
+
 
 gulp.task('buildCoreJs', () => {
     return gulp.src([
@@ -123,12 +209,21 @@ gulp.task('buildCoreJs', () => {
     .pipe(gulp.dest('./assets/vendors/core'));
 });
 
+
+
 gulp.task('buildCoreJs', () => {
     return gulp.src([
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/popper.js/dist/umd/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
 
+    ])
+})
+
+
+gulp.task('buildCoreJs', () => {
+    return gulp.src([
+        './node_modules/jquery/dist'
     ])
 })
 
@@ -200,6 +295,7 @@ gulp.task('copyAddonCss', () => {
     var style26 = gulp.src(['./node_modules/jqvmap/dist/jqvmap.min.css']).pipe(gulp.dest('./assets/vendors/jqvmap'));
     return merge(style1, style2, style3, style4, style5, style6, style7, style8, style9, style10, style11, style12, style13, style14, style15, style16, style17, style18, style19, style20, style21, style22, style23, style24, style25);
 });
+
 
 gulp.task('copyAddonJs', () => {
     var script1 = gulp.src('./node_modules/feather-icons/dist/*').pipe(gulp.dest('./assets/vendors/feather-icons'));

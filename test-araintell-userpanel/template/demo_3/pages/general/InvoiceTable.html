@@ -424,13 +424,23 @@
 
         <!-- <button type="button" class="btn btn-outline-primary"><a href="../tables/MyInvoices.html" style="color:black">فاکتور های من</a></button> -->
         
-        <div class="form-group">
-          <label for="exampleFormControlInput1">شماره موبایل مورد نظر را وارد کنید</label>
+        <!-- <div class="form-group">
+          <label for="exampleFormControlInput1">شماره موبایل مورد نظر  خود را انتخاب کنید</label>
           <input type="email"  class="form-control" name="email" id="exampleFormControlInput1" placeholder="0998XXXXXX"/>
-        </div> 
-        
+        </div>  -->
 
-        
+         
+        <div class="form-group">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">شماره موبایل خود را انتخاب کنید</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              
+              <option>09983287387</option>
+              <option>099832873654</option>
+              <option>09983287309</option>
+              
+            </select>
+          </div>
 
         <form action="#">
           <div class="container-fluid mt-5 d-flex justify-content-center w-200" style="box-shadow: 1px 1px 6px #bfbfbf;">
@@ -444,13 +454,12 @@
                     <th style="text-align: right;">نوع سرویس </th>
                     <th style="text-align: right;">تاریخ خرید سرویس</th>
                     <th class="text-right">تاریخ  اتمام اعتبار سرویس</th>
-                    <th class="text-right">تعداد سرویس ها</th>
                     <th class="text-right">مبلغ پرداختی</th>
                     <th style="text-align: right;">وضعیت سرویس</th>
                     <th style="text-align: right;">پرداخت  میان دوره</th>
                     <th style="text-align: right;">پرداخت  پایان دوره</th>
+                    <th class="text-align:center">قبض ها</th>
                   </tr>
-    
                 </thead>
     
                 <tbody>
@@ -460,7 +469,7 @@
                     <td class="text-right">400مگابایت شبانه</td>
                     <td class="text-right">1399/02/03</td>
                     <td>13399/03/04</td>
-                    <td>1</td>
+                    
                     <td>110,000 تومان</td>
                     <td style="color:green">فعال</td>
                     <td>
@@ -480,6 +489,9 @@
                       </label>
                     </div>
                 </td>
+
+                <td><button type="button" class="btn btn-success"><a href="../tables/invoice.html" style="color:white">نمایش قبض</button></a></td>
+
                   </tr>
     
                   <tr class="text-right">
@@ -488,7 +500,7 @@
                     <td class="text-right">400مگابایت شبانه</td>
                     <td class="text-right">1399/02/03</td>
                     <td>13399/03/04</td>
-                    <td>2</td>
+                    
                     <td>320,000 تومان</td>
                     <td style="color:red">غیر فعال</td>
                     <td>
@@ -508,6 +520,8 @@
                       </label>
                     </div>
                 </td>
+                <td><button type="button" class="btn btn-success"><a href="../tables/invoice.html" style="color:white">نمایش قبض</button></a></td>
+
                   </tr>
     
                   <tr class="text-right">
@@ -516,7 +530,7 @@
                     <td class="text-right">400مگابایت شبانه</td>
                     <td class="text-right"> 1399/02/03</td>
                     <td>13399/03/04</td>
-                    <td>1</td>
+                    
                     <td>150,000 تومان</td>
                     <td style="color:red">غیر فعال</td>
                     <td>
@@ -536,6 +550,8 @@
                       </label>
                     </div>
                 </td>
+                <td><button type="button" class="btn btn-success"><a href="../tables/invoice.html" style="color:white">نمایش قبض</button></a></td>
+
                   </tr>
     
                   <tr class="text-right">
@@ -544,7 +560,7 @@
                     <td class="text-right">400مگابایت شبانه</td>
                     <td class="text-right">1399/02/03</td>
                     <td>13399/03/04</td>
-                    <td>1</td>
+                    
                     <td>30,000 تومان</td>
                     <td style="color:red">غیر فعال</td>
                     <td>
@@ -564,6 +580,8 @@
                       </label>
                     </div>
                 </td>
+                <td><button type="button" class="btn btn-success"><a href="../tables/invoice.html" style="color:white">نمایش قبض</button></a></td>
+
                   </tr>
                 </tbody>
               </table>
@@ -583,7 +601,6 @@
 
   <!-- core:js -->
   <script src="../../../assets/vendors/core/core.js"></script>
-  
   <script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
   <script src="../../../assets/js/template.js"></script>
   <script src="../../../assets/vendors/sweetalert2/sweetalert2.min.js"></script>

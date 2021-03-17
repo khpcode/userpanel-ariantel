@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive userpanel with bootstrap,html,css,js",
   "description2" : "set git(control version) in this project",
-  "main": "index.html",
+  "main": "dashboard-one.html",
   "author": "khashayar panbeian",
   "license": "",
   "dependencies": {
