@@ -10,8 +10,8 @@ $(function () {
       })
     } else if (type === 'title-and-text') {
       Swal.fire(
-        'لورم ایپسوم؟',
-        'لورم ایپسوم متن ساختگی با تولید سادگی',
+        'هشدار!!!',
+        'با ثبت این درخواست سیم کارت شما مسدود خواهد شد آیا از این امر اطمینان دارید؟',
         'question'
       )
     } else if (type === 'title-icon-text-footer') {
@@ -23,17 +23,15 @@ $(function () {
       })
     } else if (type === 'custom-html') {
       Swal.fire({
-        title: '<strong><u>مثال</u> HTML</strong>',
+        title: '<strong>هشدار!!! </strong>',
         icon: 'info',
-        html: 'شما می توانید از <b>متن تو پُر</b> ، ' +
-          '<a href="//google.com">لینک</a> ' +
-          'و هر تگ HTML دیگری استفاده کنید',
+        html: 'مشترک گرامی درخواست سلب امتیاز اشتراک شماره 09122309 با موفقیت ثبت گردید.سیم کارت مذکور ظرف 24 ساعت از مالکیت شما خارج خواهد گردید. در صورتی که طی این مدت از درخواست خود منصرف شدید می توانید با مراجعه به اپلیکیشن my.ariantel.ir و یا دفاتر نمایندگی نسبت به لغو درخواست خود اقدام نمایید.',
         showCloseButton: true,
         showCancelButton: true,
         focusConfirm: false,
-        confirmButtonText: '<i class="fa fa-thumbs-up"></i> عالی!',
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-        cancelButtonText: '<i data-feather="thumbs-up"></i>',
+        confirmButtonText: 'ثبت نهایی',
+        confirmButtonAriaLabel: 'لغو',
+        cancelButtonText: 'لغو',
         cancelButtonAriaLabel: 'Thumbs down',
       });
       feather.replace();
@@ -84,8 +82,8 @@ $(function () {
     } else if (type === 'message-with-auto-close') {
       let timerInterval
       Swal.fire({
-        title: 'هشدار با قابلیت بسته شدن خودکار!',
-        html: 'این هشدار بعد از <strong></strong> میلی ثانیه بسته می شود.',
+        title: 'پیامکی برای شما ارسال شد روی لینک پیامک شده کلیک کنید',
+        html: '',
         timer: 2000,
         onBeforeOpen: () => {
           Swal.showLoading()
