@@ -398,8 +398,15 @@
 								<form action="#">
                       <h4>سامانه سلب امتیاز </h4><br/>
 
-                      <span class="badge badge-pill badge-danger"><p style="padding: 5px;font-size: 15px;">دقت کنید با وارد کردن و ثبت اطلاعات خود به شماره سیم کارتی که وارد کردید مسدود می شود</p></span><br/><br/>
-                  <div class="form-group">
+                      <!-- <span class="badge badge-pill badge-danger"><p style="padding: 5px;font-size: 15px;">دقت کنید با وارد کردن و ثبت اطلاعات خود به شماره سیم کارتی که وارد کردید مسدود می شود</p></span><br/><br/> -->
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>هشدار !!</strong> در صورت ثبت اطلاعات شماره سیم کارت مورد نظر شما برای همیشه مسدود خواهد شد
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                  <!-- <div class="form-group">
 										<label for="exampleFormControlSelect1">انتخاب شماره</label>
 										<select class="form-control" id="exampleFormControlSelect1">
 											
@@ -408,19 +415,77 @@
 											<option>09193879238</option>
 											
 										</select>
-                  </div>
+                  </div> -->
                               
 									<div class="form-group">
                    
                     <label for="exampleInputText1">کد ملی</label>
                     <p style="display: inline-block;color:red; font-size: 15px;">*</p>
-										<input type="text" class="form-control" id="exampleInputText1"
-											value=" " placeholder="" name="Fname">
+										<input type="text" class="form-control" id="exampleInputText1"name="Fname" placeholder="کد ملی خود را وارد کنید... ">
                   </div>
+
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal">
+                        استعلام
+                      </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel" style="color:tomato">شماره مورد نظر خود را انتخاب کرده و روی دکمه ثبت کلیک کنید</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">1- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                <label class="form-check-label" for="exampleCheck1">2- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                                <label class="form-check-label" for="exampleCheck1">3- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">4- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">5- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">6- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">7- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">8- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">9- 09127823763</label>
+
+                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                <label class="form-check-label" for="exampleCheck1">10- 09127823763</label>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                              <button type="button" class="btn btn-primary">ثبت</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                  
                   
                 
-            <button class="btn btn-primary btn-lg"><a href="../general/SalbEmtiaz2.html" style="color: white;">نمایش جزئیات</a></button>
-            <button class="btn btn-success btn-lg"><a href="#" style="color: white;">لغو درخواست سلب امتیاز</a></button>
+            <button class="btn btn-primary btn-lg"><a href="../general/SalbEmtiaz2.html" style="color: white;">ادامه</a></button>
+            <!-- <button class="btn btn-success btn-lg"><a href="#" style="color: white;">لغو درخواست سلب امتیاز</a></button> -->
 
       </div>
 
