@@ -126,8 +126,7 @@ $(function () {
           })
         }
       })
-    
-      
+          
     } else if (type === 'dynamic-queue') {
       const ipAPI = 'https://api.ipify.org?format=json'
       Swal.queue([{
