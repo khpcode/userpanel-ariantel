@@ -17,7 +17,7 @@ $(function () {
     } else if (type === 'title-icon-text-footer') {
       Swal.fire({
         type: 'error',
-        title: 'اوپس...',
+        title: 'ا...',
         text: 'خطایی رخ داده است!',
         footer: '<a href>آیا سوالی دارید؟</a>'
       })
@@ -34,6 +34,7 @@ $(function () {
         cancelButtonText: 'لغو',
         cancelButtonAriaLabel: 'Thumbs down',
       });
+
       feather.replace();
     } else if (type === 'custom-position') {
       Swal.fire({
@@ -164,7 +165,7 @@ $(function () {
       })
     }
 
-
+    
     else if(type === 'mixin')
   {
     const Toast = sal.mixin({
