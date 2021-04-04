@@ -31,7 +31,14 @@ gulp.task('sass', () => {
 
 
 
-//sadfkjd
+// gulp.task('sass', () => {
+//     var compile = gulp.src('assets/scss/**/style.css')
+//     .pipe(sourcemaps.init())
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(sass().on)
+// })
+
+
 
 gulp.task('sass', () => {
     var compile = gulp.src('assets/sccs/**/style.css')
