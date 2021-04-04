@@ -38,6 +38,13 @@ gulp.task('sass', () => {
 })
 
 
+// gulp.task('sass', () => {
+//     var compile = gulp.src('assets/scss/**/style.css')
+//     .pipe(sourcemaps.init())
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(sass().on)
+// })
+
 
 gulp.task('sass', () => {
     var compile = gulp.src('assets/scss/**/style.scss')
@@ -64,6 +71,8 @@ gulp.task('sass', () => {
 })
 
 
+
+//test
 
 
 gulp.task('serve', gulp.series( 'sass', () => {
