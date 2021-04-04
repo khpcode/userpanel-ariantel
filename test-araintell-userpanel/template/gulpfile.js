@@ -30,6 +30,9 @@ gulp.task('sass', () => {
 });
 
 
+
+//sadfkjd
+
 gulp.task('sass', () => {
     var compile = gulp.src('assets/sccs/**/style.css')
     .pipe(sourcemaps.init())
@@ -70,9 +73,6 @@ gulp.task('sass', () => {
     var minify = gulp.src('assets/css/**/s')
 })
 
-
-
-//test
 
 
 gulp.task('serve', gulp.series( 'sass', () => {
