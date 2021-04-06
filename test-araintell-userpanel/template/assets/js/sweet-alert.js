@@ -23,7 +23,7 @@ $(function () {
       })
     } else if (type === 'custom-html') {
       Swal.fire({
-        title: '<strong>هشدار!!! </strong>',
+        title: '<strong>توجه!!! </strong>',
         icon: 'info',
         html: 'مشترک گرامی درخواست سلب امتیاز اشتراک شماره 09122309 با موفقیت ثبت گردید.سیم کارت مذکور ظرف 24 ساعت از مالکیت شما خارج خواهد گردید. در صورتی که طی این مدت از درخواست خود منصرف شدید می توانید با مراجعه به اپلیکیشن my.ariantel.ir و یا دفاتر نمایندگی نسبت به لغو درخواست خود اقدام نمایید.',
         showCloseButton: true,
@@ -83,7 +83,7 @@ $(function () {
     } else if (type === 'message-with-auto-close') {
       let timerInterval
       Swal.fire({
-        title: 'پیامکی برای شما ارسال شد روی لینک پیامک شده کلیک کنید',
+        title: 'کد 4 رقمی ارسال شده را وارد نمایید',
         html: '',
         timer: 2000,
         onBeforeOpen: () => {
